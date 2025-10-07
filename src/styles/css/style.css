@@ -1,3 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all 0.4s linear;
+  scroll-behavior: smooth;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+*::first-letter {
+  text-transform: uppercase;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: #fff;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  max-width: 144rem;
+  margin: auto;
+}
+
+section {
+  padding: 9rem 0;
+}
+@media (max-width: 576px) {
+  section {
+    padding: 7rem 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
 h1 {
   font-size: 2.5rem;
   color: #641d1d;

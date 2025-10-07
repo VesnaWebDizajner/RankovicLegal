@@ -1,2 +1,14 @@
-$primaryColor: rgba(0, 0, 0, 1);
-$secondaryColor: rgba(150, 119, 69, 1);
+// Colors
+$primary-color: #967745;;
+$light-color:#fff;
+$dark-color:#111;
+$bttn-bg-primary: linear-gradient($primary-color, #302616);
+$bttn-bg-secondary: $dark-color;
+$bg-color-primary: linear-gradient(#927443, #766240);
+$bg-color-secondary: #F6F6F6;
+$bg-color-tertiary: linear-gradient(#222222, #000000);;
+$bg-color-light: $light-color;
+$bg-color-dark: #000;
+
+// Fonts
+$font-family: "Montserrat", sans-serif;

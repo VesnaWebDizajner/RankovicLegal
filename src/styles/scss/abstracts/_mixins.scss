@@ -1,0 +1,22 @@
+@use "abstracts/variables" as *;
+
+@mixin rwd($pixels, $type: max) {
+    @if $type ==max or $type ==min {
+        @media (#{$type}-width: #{$pixels}px) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Invalid value for $type: '#{$type}'. Only 'max' or 'min' are allowed.";
+    }
+}
+
+@mixin flex($justify: center, $align: center, $gap: 0, $flow: row nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    flex-flow: $flow;
+    @content;
+}
