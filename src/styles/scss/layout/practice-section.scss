@@ -1,0 +1,115 @@
+@use "../abstracts/index" as *;
+
+.practice-section {
+    background: $bg-color-tertiary;
+
+    &__content {
+        @include flex($gap: 2.4rem, $align: stretch, $flow: row wrap);
+
+        &-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            @include rwd(1370) {
+                width: 100%;
+                text-align: center;
+            }
+
+            .title {
+                font-size: 3.6rem;
+                line-height: 120%;
+                font-weight: 700;
+                text-transform: uppercase;
+                max-width: 32.1rem;
+
+                @include rwd(1370) {
+                    margin-inline: auto;
+                }
+
+                span {
+                    font-size: 4.8rem;
+                    color: $primary-color;
+                }
+            }
+
+            .subtitle {
+                color: $primary-color;
+                text-transform: uppercase;
+                font-weight: inherit;
+
+                @include rwd(1370) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        &-tile {
+            flex: 0 0 280px;
+            background-size: cover;
+            border-radius: .8rem;
+            position: relative;
+            text-align: center;
+            min-height: 23rem;
+
+            @include rwd(380) {
+                flex-shrink: 1;
+            }
+
+            &::after {
+                content: "";
+                @include positioning($width: 200%, $height: 200%);
+                inset: 0;
+                border: .1rem solid #2C2C2C;
+                border-radius: 1.8rem;
+                transform: translate(-.5px, -.5px) scale(.5);
+                transform-origin: top left;
+                cursor: pointer;
+            }
+
+            a {
+                @include flex($flow: column, $justify: flex-start, $gap: 1.6rem);
+                padding-block: 5.2rem 1rem;
+                padding-inline: 1.5rem;
+
+                .title {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+
+                .text {
+                    font-size: 1.4rem;
+                }
+
+                .title,
+                .text {
+                    line-height: 150%;
+                }
+
+                .icon-circle-arrow-right {
+                    background-color: $light-color;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                a {
+
+                    .title,
+                    .text,
+                    .icon-circle-arrow-right {
+                        transform: translateY(-2rem);
+                    }
+
+                    .icon-circle-arrow-right {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
