@@ -27,16 +27,27 @@ html {
 body {
     font-family: $font-family;
     font-size: 1.6rem;
-    line-height: 1.4;
-    background-color: $bg-color-light;
+    line-height: 1.6;
+    font-weight: 400;
+    background-color: $bg-color-dark;
     color: $light-color;
     min-height: 100vh;
 }
 
 .container {
-    width: 80%;
-    max-width: 144rem;
-    margin: auto;
+    width: 100%;
+    margin-inline: auto;
+
+    &-l {
+        @extend .container;
+        max-width: 124.6rem;
+    }
+
+    &-m {
+        @extend .container;
+        width: 90%;
+        max-width: 119.6rem;
+    }
 }
 
 section {
@@ -52,12 +63,3 @@ img {
     object-fit: cover;
     vertical-align: middle;
 }
-
-h1 {
-    // Test, remove later
-    font-size: 2.5rem;
-    color: #641d1d;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
