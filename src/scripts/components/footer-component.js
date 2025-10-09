@@ -4,7 +4,7 @@ class FooterComponent extends HTMLElement {
                     <footer class="footer">
                         <div class="footer__content container-m">
                             <div class="footer__about">
-                                <img class="footer__about-logo" src="src/assets/img/logo-footer.png" alt="Ranković Legal Logo - Text">
+                                <img class="footer__about-logo" src="./src/assets/img/logo-footer.png" alt="Ranković Legal Logo - Text">
                                 <p class="footer__about-text">
                                     Vaš pravni partner u svim situacijama.
                                     <br />

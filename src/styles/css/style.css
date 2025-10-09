@@ -206,7 +206,7 @@ img {
 }
 
 .footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(/src/assets/img/footer.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/footer.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   font-size: 1.4rem;
