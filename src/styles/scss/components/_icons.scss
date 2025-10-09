@@ -10,37 +10,37 @@
 
     &-clock {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/clock-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/clock-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("../../assets/img/icons/clock-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/clock-icon.svg") no-repeat center / 100% 100%;
     }
 
     &-phone {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/phone-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/phone-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("../../assets/img/icons/phone-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/phone-icon.svg") no-repeat center / 100% 100%;
     }
 
     &-envelope {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/envelope-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/envelope-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("../../assets/img/icons/envelope-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/envelope-icon.svg") no-repeat center / 100% 100%;
     }
 
     &-map {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/map-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/map-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("..../../assets/img/icons/map-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/map-icon.svg") no-repeat center / 100% 100%;
     }
 
     &-in {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/in-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/in-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("..../assets/img/icons/in-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/in-icon.svg") no-repeat center / 100% 100%;
     }
 
     &-circle-arrow-right {
         @extend .icon;
-        -webkit-mask: url("/src/assets/img/icons/circle-arrow-right-icon.svg") no-repeat center / 100% 100%;
-        mask: url("/src/assets/img/icons/circle-arrow-right-icon.svg") no-repeat center / 100% 100%;
+        -webkit-mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center / 100% 100%;
     }
 }

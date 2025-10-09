@@ -68,28 +68,28 @@ img {
   vertical-align: middle;
 }
 .icon-clock {
-  -webkit-mask: url("/src/assets/img/icons/clock-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/clock-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("../../assets/img/icons/clock-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/clock-icon.svg") no-repeat center/100% 100%;
 }
 .icon-phone {
-  -webkit-mask: url("/src/assets/img/icons/phone-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/phone-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("../../assets/img/icons/phone-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/phone-icon.svg") no-repeat center/100% 100%;
 }
 .icon-envelope {
-  -webkit-mask: url("/src/assets/img/icons/envelope-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/envelope-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("../../assets/img/icons/envelope-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/envelope-icon.svg") no-repeat center/100% 100%;
 }
 .icon-map {
-  -webkit-mask: url("/src/assets/img/icons/map-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/map-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("..../../assets/img/icons/map-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/map-icon.svg") no-repeat center/100% 100%;
 }
 .icon-in {
-  -webkit-mask: url("/src/assets/img/icons/in-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/in-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("..../assets/img/icons/in-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/in-icon.svg") no-repeat center/100% 100%;
 }
 .icon-circle-arrow-right {
-  -webkit-mask: url("/src/assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
-  mask: url("/src/assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
+  -webkit-mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
 }
 
 .practice-section {
