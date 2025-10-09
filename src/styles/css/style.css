@@ -44,15 +44,6 @@ body {
   max-width: 119.6rem;
 }
 
-section {
-  padding: 9rem 0;
-}
-@media (max-width: 576px) {
-  section {
-    padding: 7rem 0;
-  }
-}
-
 img {
   max-width: 100%;
   object-fit: cover;
@@ -90,6 +81,272 @@ img {
 .icon-circle-arrow-right {
   -webkit-mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
   mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
+}
+
+.bttn, .bttn-secondary, .bttn-primary {
+  display: inline-block;
+  background: transparent;
+  color: #967745;
+  padding: 1.5rem;
+  line-height: 110%;
+  font-weight: 500;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+@media (max-width: 568px) {
+  .bttn, .bttn-secondary, .bttn-primary {
+    width: 100%;
+    max-width: 16.3rem;
+  }
+}
+.bttn:hover, .bttn-secondary:hover, .bttn-primary:hover {
+  background-color: #967745;
+  color: #111;
+}
+.bttn-primary {
+  background-color: #967745;
+  color: #fff;
+}
+.bttn-secondary {
+  padding: 1.7rem;
+  min-width: 22.2rem;
+  background-color: #111;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.contact-section {
+  padding-block: 11.9rem 13.1rem;
+}
+.contact-section__title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 2.1rem;
+}
+.contact-section__text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-block-end: 5.5rem;
+}
+.contact-section__title, .contact-section__text {
+  line-height: 100%;
+  text-align: center;
+}
+.contact-section__box {
+  border-radius: 1rem;
+  display: flex;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  background-color: #fff;
+}
+@media (max-width: 800px) {
+  .contact-section__box {
+    flex-direction: column;
+  }
+}
+.contact-section__box .text-box {
+  flex: 0.85;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  border-radius: 1rem;
+  padding-block: 14.7rem 2.5rem;
+  padding-inline: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .contact-section__box .text-box {
+    padding-block: 10rem 2.5rem;
+    padding-inline: 2rem;
+    flex: 1;
+  }
+}
+@media (max-width: 800px) {
+  .contact-section__box .text-box {
+    padding-block: 4rem;
+    padding-inline: 4rem;
+  }
+}
+@media (max-width: 568px) {
+  .contact-section__box .text-box {
+    padding-inline: 2rem;
+  }
+}
+.contact-section__box .text-box:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../../assets/img/scale-justice.jpg) no-repeat;
+  background-position: center 70%;
+  background-size: cover;
+  transform: rotateY(180deg);
+  z-index: -1;
+}
+@media (max-width: 800px) {
+  .contact-section__box .text-box:after {
+    background-position: center 30%;
+  }
+}
+@media (max-width: 430px) {
+  .contact-section__box .text-box:after {
+    background-position: center;
+  }
+}
+.contact-section__box .text-box__title {
+  color: #967745;
+  font-size: 2rem;
+  line-height: 110%;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-block-end: 6.6rem;
+}
+@media (max-width: 800px) {
+  .contact-section__box .text-box__title {
+    text-align: center;
+    margin-block-end: 4rem;
+  }
+}
+@media (max-width: 800px) {
+  .contact-section__box .text-box__contact {
+    width: max-content;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 430px) {
+  .contact-section__box .text-box__contact {
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}
+@media (max-width: 360px) {
+  .contact-section__box .text-box__contact {
+    font-size: 1.2rem;
+  }
+}
+.contact-section__box .text-box__contact-opt:not(:last-of-type) {
+  margin-bottom: 2.4rem;
+}
+.contact-section__box .text-box__contact-opt i {
+  margin-inline-end: 2.1rem;
+  width: 2.2rem;
+  height: 2.1rem;
+}
+@media (max-width: 992px) {
+  .contact-section__box .text-box__contact-opt i {
+    margin-inline-end: 1rem;
+  }
+}
+@media (max-width: 430px) {
+  .contact-section__box .text-box__contact-opt i {
+    width: 1.8rem;
+    height: 1.7rem;
+  }
+}
+.contact-section__box .text-box__icon-box {
+  margin-top: auto;
+  background-color: #967745;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+}
+.contact-section__box .text-box__icon-box .icon-in {
+  background-color: #fff;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+@media (max-width: 800px) {
+  .contact-section__box .text-box__icon-box .icon-in {
+    margin-block-start: 4rem;
+    margin-inline-start: auto;
+  }
+}
+.contact-section__box .form-box {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  color: #111;
+  padding-inline: 5rem 4rem;
+  padding-block: 5.4rem 6rem;
+  flex-grow: 1;
+}
+@media (max-width: 992px) {
+  .contact-section__box .form-box {
+    padding-inline: 4rem 3rem;
+    padding-block: 5rem;
+    gap: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .contact-section__box .form-box {
+    padding-block: 4rem 3rem;
+  }
+}
+@media (max-width: 568px) {
+  .contact-section__box .form-box {
+    padding-inline: 2rem;
+  }
+}
+@media (max-width: 430px) {
+  .contact-section__box .form-box {
+    padding-inline: 0;
+  }
+}
+.contact-section__box .form-box__heading {
+  text-align: center;
+  width: 100%;
+}
+.contact-section__box .form-box__heading-title {
+  font-size: 3.2rem;
+  line-height: 3.9rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.contact-section__box .form-box__heading-text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+@media (max-width: 800px) {
+  .contact-section__box .form-box__heading-text {
+    margin-bottom: 2rem;
+  }
+}
+.contact-section__box .form-box label {
+  flex: 0 1 calc(50% - 2rem);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 992px) {
+  .contact-section__box .form-box label {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+.contact-section__box .form-box label::first-letter {
+  text-transform: capitalize;
+  color: red;
+}
+.contact-section__box .form-box label input,
+.contact-section__box .form-box label textarea {
+  border-bottom: 1px solid #8D8D8D;
+  width: 100%;
+  min-height: 3.5rem;
+}
+.contact-section__box .form-box label.message {
+  flex: 0 1 100%;
+}
+.contact-section__box .form-box .bttn-secondary {
+  margin-inline-start: auto;
+  margin-block-start: 0.3rem;
 }
 
 .practice-section {

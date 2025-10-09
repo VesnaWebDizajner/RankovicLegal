@@ -51,14 +51,6 @@ body {
     }
 }
 
-section {
-    padding: 9rem 0;
-
-    @include rwd(576) {
-        padding: 7rem 0;
-    }
-}
-
 img {
     max-width: 100%;
     object-fit: cover;

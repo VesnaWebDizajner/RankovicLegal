@@ -1,0 +1,238 @@
+@use "../abstracts/index" as *;
+
+.contact-section {
+    padding-block: 11.9rem 13.1rem;
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-block-end: 2.1rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-block-end: 5.5rem;
+    }
+
+    &__title,
+    &__text {
+        line-height: 100%;
+        text-align: center;
+    }
+
+    &__box {
+        border-radius: 1rem;
+        display: flex;
+        padding-block: 1rem;
+        padding-inline: 1rem;
+        background-color: $light-color;
+
+        @include rwd(800) {
+            flex-direction: column;
+        }
+
+        .text-box {
+            flex: .85;
+            display: flex;
+            flex-direction: column;
+            z-index: 0;
+            border-radius: 1rem;
+            padding-block: 14.7rem 2.5rem;
+            padding-inline: 4rem;
+            position: relative;
+            overflow: hidden;
+
+            @include rwd(992) {
+                padding-block: 10rem 2.5rem;
+                padding-inline: 2rem;
+                flex: 1;
+            }
+
+            @include rwd(800) {
+                padding-block: 4rem;
+                padding-inline: 4rem;
+            }
+
+            @include rwd(568) {
+                padding-inline: 2rem;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../../assets/img/scale-justice.jpg) no-repeat;
+                background-position: center 70%;
+                background-size: cover;
+                transform: rotateY(180deg);
+                z-index: -1;
+
+                @include rwd(800) {
+                    background-position: center 30%;
+                }
+
+                @include rwd(430) {
+                    background-position: center;
+                }
+            }
+
+            &__title {
+                color: $primary-color;
+                font-size: 2rem;
+                line-height: 110%;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin-block-end: 6.6rem;
+
+                @include rwd(800) {
+                    text-align: center;
+                    margin-block-end: 4rem;
+                }
+            }
+
+            &__contact {
+                @include rwd(800) {
+                    width: max-content;
+                    margin-inline: auto;
+                }
+
+                @include rwd(430) {
+                    font-size: 1.4rem;
+                    line-height: 120%;
+                }
+
+                @include rwd(360) {
+                    font-size: 1.2rem;
+                }
+
+                &-opt {
+                    &:not(:last-of-type) {
+                        margin-bottom: 2.4rem;
+                    }
+
+                    i {
+                        margin-inline-end: 2.1rem;
+                        width: 2.2rem;
+                        height: 2.1rem;
+
+                        @include rwd(992) {
+                            margin-inline-end: 1rem;
+                        }
+
+                        @include rwd(430) {
+                            width: 1.8rem;
+                            height: 1.7rem;
+                        }
+                    }
+                }
+            }
+
+            &__icon-box {
+                margin-top: auto;
+                background-color: $primary-color;
+                width: 3rem;
+                height: 3rem;
+                text-align: center;
+                border-radius: 50%;
+
+                .icon-in {
+                    background-color: $light-color;
+                    width: 1.2rem;
+                    height: 1.2rem;
+
+                    @include rwd(800) {
+                        margin-block-start: 4rem;
+                        margin-inline-start: auto;
+                    }
+                }
+            }
+        }
+
+        .form-box {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+            color: $dark-color;
+            padding-inline: 5rem 4rem;
+            padding-block: 5.4rem 6rem;
+            flex-grow: 1;
+
+            @include rwd(992) {
+                padding-inline: 4rem 3rem;
+                padding-block: 5rem;
+                gap: 2rem;
+            }
+
+            @include rwd(800) {
+                padding-block: 4rem 3rem;
+            }
+
+            @include rwd(568) {
+                padding-inline: 2rem;
+            }
+
+            @include rwd(430) {
+                padding-inline: 0;
+            }
+
+            &__heading {
+                text-align: center;
+                width: 100%;
+
+                &-title {
+                    font-size: 3.2rem;
+                    line-height: 3.9rem;
+                    font-weight: 600;
+                    margin-bottom: 1.2rem;
+                }
+
+                &-text {
+                    font-size: 1.4rem;
+                    line-height: 1.7rem;
+
+                    @include rwd(800) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            label {
+                flex: 0 1 calc(50% - 2rem);
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+
+                @include rwd(992) {
+                    flex: 0 1 calc(50% - 1rem);
+                }
+
+                &::first-letter {
+                    text-transform: capitalize;
+                    color: red;
+                }
+
+                input,
+                textarea {
+                    border-bottom: 1px solid #8D8D8D;
+                    width: 100%;
+                    min-height: 3.5rem;
+                }
+
+                &.message {
+                    flex: 0 1 100%;
+                }
+            }
+
+            .bttn-secondary {
+                margin-inline-start: auto;
+                margin-block-start: .3rem;
+            }
+        }
+    }
+}
