@@ -19,24 +19,45 @@
 </head>
 
 <body>
+    <navigation-section-component active-page="home"></navigation-section-component>
     <header>
-        <nav></nav>
+        
+        <!-- <nav>
+            <ul>
+                <li><a class="<?php echo active_nav(''); ?>" href="/">Početna</a></li>
+                <li class="dropdown">
+                    <a class="<?php echo active_nav('oblasti-prava'); ?>" href="/oblasti-prava">Oblasti prava</a>
+                    <div class="dropdown-menu">
+                        <a href="/oblasti-prava/krivicno-pravo">Krivično pravo</a>
+                        <a href="/oblasti-prava/radno-pravo">Radno pravo</a>
+                        <a href="/oblasti-prava/porodicno-pravo">Porodično pravo</a>
+                    </div>
+                </li>
+                <li><a class="<?php echo active_nav('o-nama'); ?>" href="/o-nama">O nama</a></li>
+                <li><a class="<?php echo active_nav('blog'); ?>" href="/blog">Blog</a></li>
+                <li><a class="<?php echo active_nav('kontakt'); ?>" href="/kontakt">Kontakt</a></li>
+            </ul>
+        </nav> -->
     </header>
+
     <main>
         <practice-section-component>
             <practice-section-tile-component data-title="Nasledno pravo" data-text="Postoje dva načina nasleđivanja u srpskom pravu - nasleđivanje po osnovu zakona i po
-                        osnovu zaveštanja..." data-background-img="./src/assets/img/inheritance-law.jpg">
+                osnovu zaveštanja..."
+                data-background-img="./src/assets/img/inheritance-law.jpg">
             </practice-section-tile-component>
             <practice-section-tile-component data-title="Radno pravo" data-text="Potreba da se angažuje advokat za radno pravo može da se javi u različitim
-                        situacijama vezanim za radni odnos ili radno pravo..."
+                situacijama vezanim za radni odnos ili radno pravo..."
                 data-background-img="./src/assets/img/employment-law.jpg">
             </practice-section-tile-component>
             <practice-section-tile-component data-title="Ugovorno pravo" data-text="Ugovorno pravo je grana prava koja se bavi regulisanjem pravnih odnosa između
-                        ugovornih strana..." data-background-img="./src/assets/img/contract-law.jpg">
+                ugovornih strana..."
+                data-background-img="./src/assets/img/contract-law.jpg">
             </practice-section-tile-component>
         </practice-section-component>
+        <contact-section-component></contact-section-component>
     </main>
-     <contact-section-component></contact-section-component>
+     
     <footer-component></footer-component>
 </body>
 

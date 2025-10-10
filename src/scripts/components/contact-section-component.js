@@ -1,9 +1,12 @@
 class ContactSectionComponent extends HTMLElement {
     connectedCallback() {
+        let paddingBlock = this.getAttribute('data-padding-block') ?? '11.9rem 13.1rem';
+        let title = this.getAttribute('data-title') ?? 'Kontakt';
+        let text = this.getAttribute('data-text') ?? 'Imate pitanja? Pošaljite nam poruku ili nas pozovite.';
         this.innerHTML = `
                     <div class="contact-section__content container-m">
-                        <h2 class="contact-section__title">Kontakt</h2>
-                        <p class="contact-section__text">Imate pitanja? Pošaljite nam poruku ili nas pozovite.</p>
+                        <h2 class="contact-section__title">${title}</h2>
+                        <p class="contact-section__text">${text}</p>
                         <div class="contact-section__box">
                             <div class="text-box">
                                 <h3 class="text-box__title">Advokatske usluge Beograd</h3>
@@ -61,6 +64,7 @@ class ContactSectionComponent extends HTMLElement {
                     </div>`;
 
         this.style.display = "block";
+        this.style.paddingBlock = paddingBlock;
         this.classList.add("contact-section");
         this.role = "region";
         this.ariaLabel = "Kontakt forma"

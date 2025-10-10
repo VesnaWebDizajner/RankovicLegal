@@ -1,8 +1,6 @@
 @use "../abstracts/index" as *;
 
 .practice-section {
-    background: $bg-color-tertiary;
-
     &__content {
         @include flex($gap: 2.4rem, $align: stretch, $flow: row wrap);
 

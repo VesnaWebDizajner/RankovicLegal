@@ -1,0 +1,147 @@
+@use "../abstracts/index" as *;
+
+.navigation-section {
+    @include positioning($position: fixed, $top: 0, $left: 0, $width: 100%);
+    background: transparent;
+    padding: 2.4rem 6.4rem;
+    z-index: 1;
+
+    @include rwd(576) {
+        padding: 0 3.2rem;
+    }
+
+    &.scrolled {
+        background-color: $dark-color;
+    }
+
+    .nav {
+        @include flex($justify: space-between);
+
+        &__logo {
+            @include rwd(1200) {
+                margin-inline-start: auto;
+            }
+
+            &-desktop {
+                width: 20rem;
+
+                @include rwd(1200) {
+                    display: none;
+                }
+            }
+
+            &-mobile {
+                display: none;
+
+                @include rwd(1200) {
+                    width: 8rem;
+                    display: block;
+                }
+            }
+        }
+
+        &__list {
+            @include flex($justify: flex-start, $gap: 3.2rem);
+
+            @include rwd(1200) {
+                display: none;
+            }
+        }
+
+        &__link {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+            &:not(.nav__link--btn) {
+                font-weight: 500;
+
+                &.active {
+                    color: $primary-color ;
+                }
+            }
+        }
+
+        &__hamburger {
+            @include flex($justify: space-between, $align: stretch, $flow: column);
+            width: 4rem;
+            height: 3rem;
+            cursor: pointer;
+            display: none;
+
+            .line {
+                width: 100%;
+                height: .3rem;
+                background-color: $light-color;
+            }
+
+            .line:nth-child(2) {
+                width: 80%;
+            }
+
+            @include rwd(1200) {
+                display: flex;
+            }
+
+            @include rwd(576) {
+                width: 3rem;
+                height: 2rem;
+            }
+        }
+
+        .mobile-menu {
+            @include positioning($position: fixed, $top: 0, $bottom: 0, $left: 0, $width: 65%);
+            @include flex($flow: column, $gap: 3.2rem);
+            background-color: $primary-color;
+            transform: translateX(-100%);
+            padding: 0 1.6rem;
+
+            #close {
+                @include positioning($position: fixed, $top: 3rem, $right: 2rem);
+                color: $light-color;
+                font-size: 3.2rem;
+                cursor: pointer;
+            }
+
+            &__list {
+                text-align: center;
+                @include flex($flow: column, $gap: 2.4rem);
+            }
+
+            &__link {
+                font-weight: 700;
+                text-transform: uppercase;
+
+                &.active {
+                    color: $primary-color ;
+                }
+            }
+
+            &__text {
+                font-size: 1.4rem;
+                margin-top: 2.4rem;
+                text-align: center;
+
+                span {
+                    color: $primary-color;
+                }
+            }
+
+            &__icons {
+                display: flex;
+                gap: 3.2rem;
+
+                a {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    #nav-toggle {
+        &:checked {
+            &~.mobile-menu {
+                transform: translateX(0);
+            }
+        }
+    }
+}
