@@ -29,9 +29,9 @@ class ContactSectionComponent extends HTMLElement {
                                         </a>
                                     </li>
                                 </ul>
-                                <div class="text-box__icon-box">
+                                <a href="https://www.linkedin.com/in/andrija-ranković-23626131b" target="_blank" class="text-box__icon-box">
                                     <i class="icon-in"></i>
-                                </div>
+                                </a>
                             </div>
                             <form action="" class="form-box">
                                 <div class="form-box__heading">

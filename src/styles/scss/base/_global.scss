@@ -49,10 +49,15 @@ body {
         width: 90%;
         max-width: 119.6rem;
     }
+
+    &-s {
+        @extend .container;
+        width: 90%;
+        max-width: 96.1rem;
+    }
 }
 
 img {
-    max-width: 100%;
     object-fit: cover;
     vertical-align: middle;
 }
