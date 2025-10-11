@@ -46,6 +46,70 @@
             @include rwd(1200) {
                 display: none;
             }
+
+            .dropdown {
+                position: relative;
+
+                &>a {
+                    &:after {
+                        content: url(../../assets/img/icons/arrow-down-icon.svg);
+                        margin-inline-start: .6rem;
+                    }
+                }
+
+                &-menu {
+                    opacity: 0;
+                    position: absolute;
+                    top: calc(100% + 20rem);
+                    left: 0;
+                    background: #232323;
+                    border-radius: .5rem;
+                    padding-block: 1.7rem 1.8rem;
+                    padding-inline: 2.5rem;
+                    font-size: 1.4rem;
+                    line-height: 1.5rem;
+                    font-weight: 500;
+                    letter-spacing: .05rem;
+                    border: .1rem solid #F1F1F126;
+
+                    a {
+                        display: inline-block;
+                        white-space: nowrap;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 1.6rem;
+                        }
+
+                        &:hover,
+                        &.active {
+                            color: $primary-color ;
+                        }
+                    }
+                }
+
+                &:hover {
+                    .dropdown-menu {
+                        opacity: 1;
+                        top: calc(100% + 1rem);
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 100%;
+                            height: 1.3rem;
+                            top: -1.3rem;
+                        }
+                    }
+
+                    &>a {
+                        &:after {
+                            content: url(../../assets/img/icons/arrow-up-icon.svg);
+                            margin-inline-start: .6rem;
+                        }
+                    }
+                }
+            }
         }
 
         &__link {
@@ -55,6 +119,7 @@
             &:not(.nav__link--btn) {
                 font-weight: 500;
 
+                &:hover,
                 &.active {
                     color: $primary-color ;
                 }

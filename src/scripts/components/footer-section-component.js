@@ -1,10 +1,13 @@
 class FooterSectionComponent extends HTMLElement {
     connectedCallback() {
+        const stepBackNum = this.getAttribute('data-path-back-num') ?? 0;
+        const deepSegment = this.getAttribute('data-deep-segment') ?? "./";
+        let pathStepBack = '../'.repeat(stepBackNum);
         this.innerHTML = `
                     <footer class="footer">
                         <div class="footer__content container-m">
                             <div class="footer__about">
-                                <img class="footer__about-logo" src="./src/assets/img/logo-footer.png" alt="Ranković Legal Logo - Text">
+                                <img class="footer__about-logo" src="${pathStepBack}src/assets/img/logo-footer.png" alt="Ranković Legal Logo - Text">
                                 <p class="footer__about-text">
                                     Vaš pravni partner u svim situacijama.
                                     <br />
@@ -20,22 +23,22 @@ class FooterSectionComponent extends HTMLElement {
                                     <h3 class="nav-title">Istražite</h3>
                                     <ul role="nav" class="nav">
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${pathStepBack}index.html">
                                                 Početna
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${pathStepBack}o-nama.html">
                                                 O nama
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${pathStepBack}blog.html">
                                                 Blog
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${pathStepBack}kontakt.html">
                                                 Kontakt
                                             </a>
                                         </li>
@@ -45,37 +48,37 @@ class FooterSectionComponent extends HTMLElement {
                                     <h3 class="nav-title">Usluge</h3>
                                     <ul role="nav" class="nav">
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}krivicno-pravo.html">
                                                 Krivično pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}radno-pravo.html">
                                                 Radno pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}porodicno-pravo.html">
                                                 Porodično pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="./ugovorno-pravo.html">
                                                 Ugovorno pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}prekrsajno-pravo.html">
                                                 Prekršajno pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}nasledno-pravo.html">
                                                 Nasledno pravo
                                             </a>
                                         </li>
                                         <li class="nav__list">
-                                            <a href="">
+                                            <a href="${deepSegment}imovinsko-pravni-odnosi.html">
                                                 Imovinsko-pravni odnosi
                                             </a>
                                         </li>

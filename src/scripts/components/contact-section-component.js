@@ -3,6 +3,7 @@ class ContactSectionComponent extends HTMLElement {
         let paddingBlock = this.getAttribute('data-padding-block') ?? '11.9rem 13.1rem';
         let title = this.getAttribute('data-title') ?? 'Kontakt';
         let text = this.getAttribute('data-text') ?? 'Imate pitanja? Pošaljite nam poruku ili nas pozovite.';
+        let background = this.getAttribute('data-background') ?? 'transparent';
         this.innerHTML = `
                     <div class="contact-section__content container-m">
                         <h2 class="contact-section__title">${title}</h2>
@@ -64,6 +65,7 @@ class ContactSectionComponent extends HTMLElement {
                     </div>`;
 
         this.style.display = "block";
+        this.style.background = background;
         this.style.paddingBlock = paddingBlock;
         this.classList.add("contact-section");
         this.role = "region";
