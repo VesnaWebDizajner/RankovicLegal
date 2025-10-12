@@ -1,0 +1,173 @@
+@use "../abstracts/index" as *;
+
+// === NAVIGATION ===
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent;
+  padding: 16px 0;
+
+  &.scrolled {
+    background-color: $dark-color;
+    top: 0;
+  }
+
+  @include rwd(576px) {
+    padding: 0 2rem;
+  }
+
+  .nav_wrapper {
+    @include flex(space-between, center, 0, row nowrap);
+    max-width: auto;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+
+    .nav_logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav_list {
+      @include flex(flex-end, center, 32px, row nowrap);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+
+        .nav_link {
+          font-size: 15px;
+          color: $light-color;
+          text-decoration: none;
+          text-transform: none;
+          transition: color 0.3s ease;
+
+          &.active {
+            color: $primary-color;
+          }
+        }
+
+        .nav_link_btn {
+          background: linear-gradient(90deg, #967745 40%, #786039 100%);
+          background-color: $primary-color;
+          color: #fff;
+          padding: 15px 25px;
+          border-radius: 5px;
+        }
+      }
+
+      .dropdown {
+        position: relative;
+
+        &:hover {
+          color: $primary-color;
+
+          i {
+            transform: rotate(180deg);
+          }
+        }
+
+        .dropdown_menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #323231;
+          padding: 10px 0;
+          border-radius: 4px;
+          min-width: 180px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          z-index: 50;
+
+          li {
+            a.dropdown_link {
+              display: block;
+              padding: 10px 20px;
+              color: $light-color;
+              text-decoration: none;
+              font-size: 14px;
+              white-space: nowrap;
+              transition: background-color 0.3s;
+            }
+          }
+        }
+
+        &:hover {
+          .dropdown_menu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+
+      .hamburger__line {
+        width: 25px;
+        height: 3px;
+        background-color: $light-color;
+        transition: all 0.3s ease;
+
+        &--mid {
+          width: 20px;
+        }
+      }
+    }
+
+    &.open {
+      .nav_list {
+        display: flex;
+      }
+    }
+  }
+
+  //  Responsive za ekran manje od 1200px
+  @media (max-width: 1200px) {
+    .nav_wrapper {
+      .nav_list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        flex-direction: column;
+        background-color: $dark-color;
+        padding: 20px;
+        border-radius: 6px;
+        z-index: 100;
+
+        li {
+          margin-bottom: 12px;
+
+          .nav_link {
+            font-size: 16px;
+            display: inline-block;
+          }
+
+          .nav_link_btn {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+          }
+        }
+      }
+
+      .nav__hamburger {
+        display: flex;
+      }
+
+      &.open {
+        .nav_list {
+          display: flex;
+        }
+      }
+    }
+  }
+}

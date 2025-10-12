@@ -1,0 +1,375 @@
+@use "../abstracts/index" as *;
+
+// ---Top__bar meni--- //
+.top_bar {
+  @include position(relative, 0, auto, auto, 0, 100%, 40px);
+  background-color: $dark-color;
+
+  .container {
+    @include flex(space-between, center, 36px, row nowrap);
+
+    .info_item {
+      @include flex(space-between, center, 16px, row nowrap);
+      height: auto;
+
+      i {
+        color: $primary-color;
+      }
+
+      P {
+        font-size: 14px;
+        color: $light-color;
+
+        strong {
+          font-weight: 700;
+        }
+
+        &.mail {
+          text-transform: none;
+        }
+      }
+
+      a {
+        color: $light-color;
+      }
+    }
+
+    .line {
+      width: 0.5px;
+      height: 40px;
+      background-color: $light-color;
+    }
+
+    .bar_link {
+      margin-left: auto;
+    }
+  }
+}
+
+//  Responsive za ekran manje od 1200px
+@media (max-width: 1200px) {
+  .top_bar {
+    display: none;
+  }
+}
+
+// ---Header section--- //
+
+.header {
+  @include position(relative, 100%, auto, auto, auto, 100%, 100svh);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/lawyer-environment.jpg);
+  background-size: cover;
+  background-position: center;
+
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    padding: 0 20px;
+    height: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+  &_heading {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 28px;
+
+    @include rwd(768px) {
+      font-size: 28px;
+      text-align: center;
+      width: 400px;
+    }
+
+    span {
+      font-weight: 400;
+      display: block;
+    }
+
+    &_p {
+      font-weight: 700;
+      font-size: 96px;
+      text-transform: uppercase;
+    }
+  }
+
+  &_p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 20px auto 0;
+    font-weight: normal;
+  }
+
+  &_btns {
+    @include flex(inline-flex, center, 16px, row wrap);
+    margin-top: 24px;
+    gap: 20px;
+
+    .header_btn_one {
+      display: inline-flex;
+      background: linear-gradient(90deg, #967745 40%, #786039 100%);
+      background-color: $primary-color;
+      color: $light-color;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+
+      i {
+        font-size: 16px;
+        margin: 0 6px;
+        color: $light-color;
+      }
+    }
+
+    .header_btn_two {
+      display: inline-flex;
+      background: transparent;
+      color: $light-color;
+      padding: 10px 25px;
+      text-decoration: none;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  }
+}
+
+// ---Law section--- //
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 40px 0;
+
+  .law,
+  .services {
+    flex: 1;
+  }
+
+  .law {
+    margin-top: 70px;
+    .law_heading {
+      text-align: left;
+
+      h2 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 10px;
+        color: $dark-color;
+        margin-bottom: 30px;
+      }
+
+      .law_heading_line {
+        width: 55px;
+        border-bottom: 4px solid $primary-color;
+        margin: 10px 0 20px;
+      }
+
+      .law_description {
+        font-size: 16px;
+        color: $dark-color;
+        max-width: 600px;
+        line-height: 1.6;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .service_card {
+      display: flex;
+      align-items: center;
+      background-color: $light-color;
+      border-radius: 0;
+      padding: 24px;
+      transition: transform 0.3s ease;
+
+      .service_icon {
+        .icon_background {
+          background-color: $dark-color;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 17px;
+            height: 25px;
+
+            object-fit: contain;
+          }
+        }
+      }
+
+      .service_text {
+        h3 {
+          font-size: 16px;
+          font-weight: 700;
+          color: #000;
+          margin-bottom: 8px;
+          margin-left: 30px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #333;
+          line-height: 1.5;
+          margin-left: 30px;
+        }
+      }
+
+      &.highlighted {
+        background: linear-gradient(90deg, #967745 40%, #786039 100%);
+        border-radius: 20px 20px 0 0;
+        color: #fff;
+
+        .service_text {
+          h3,
+          p {
+            color: #fff;
+          }
+        }
+
+        .service-icon img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+
+  //  Responsive
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+
+    .law,
+    .services {
+      width: 100%;
+    }
+
+    .law .law_heading {
+      text-align: center;
+
+      .law_description {
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .law_heading_line {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+// ---Hero section--- //
+
+.hero {
+  width: 100%;
+  background-color: $dark-color;
+  color: #fff;
+  padding: 80px 0;
+
+  .hero_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  .hero_image {
+    flex: 1;
+    transform: scaleX(-1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+
+      @media (max-width: 1024px) {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .hero_content {
+    flex: 1;
+    max-width: 600px;
+    text-align: right;
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 10px;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      color: $primary-color;
+      margin-bottom: 20px;
+
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 20px;
+
+      @media (max-width: 1024px) {
+        text-align: center;
+        font-size: 14px;
+        margin: auto;
+      }
+    }
+
+    .signature {
+      font-size: 14px;
+      font-weight: 500;
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 1024px) {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,1 +1,121 @@
-<h1>Contact</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+
+    <!--Favicon-->
+
+    <link rel="icon" type="image/png" href="Assets/img/favicon.png" />
+
+    <!--Description-->
+
+    <meta
+      name="description"
+      content="Advokatska kancelarija za sveobuhvatnu pravnu podršku i advokatske usluge Valjevo. Krivično, radno, porodično, nasledno, prekršajno kao i druge grane prava."
+    />
+
+    <!--Google fonts-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bentham&family=Comic+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Font Awesome CDN-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--Custom CSS-->
+
+    <link rel="stylesheet" href="src/styles/css/style.css" />
+  </head>
+  <body>
+
+    <!--Top__bar section starts-->
+    <div class="top_bar">
+      <div class="container">
+        <div class="info_item">
+          <i class="fa-solid fa-clock"></i>
+          <p><strong>Pon-Pet </strong>09:00 - 17:00</p>
+        </div>
+        <div class="line"></div>
+        <div class="info_item">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="mailto:adv.andrijarankovic@gmail.com" class="mail"
+            >adv.andrijarankovic@gmail.com</a
+          >
+        </div>
+        <div class="line"></div>
+        <div class="info_item">
+          <i class="fa-solid fa-phone"></i>
+          <a href=""tel:+381638799247"">+381 63 87 99 247</a>
+        </div>
+
+        <a
+          href="https://www.linkedin.com/in/andrija-rankovi%C4%87-23626131b/"
+          target="_blank"
+          class="bar_link"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    <!--Top__bar section ends-->
+
+    <!--Nav section starts-->
+    <nav class="nav">
+      <div class="nav_wrapper container">
+      <img src="Assets/img/rankovic-logo.png" alt="logo" class="nav_logo" />
+
+      <ul class="nav_list">
+        <li>
+          <a href="home.html" class="nav_link">početna</a>
+        </li>
+        <li class="nav_item dropdown">oblasti prava <i class="fa-solid fa-angle-down"></i>
+          <ul class="dropdown_menu">
+            <li><a href="#" class="dropdown_link">Krivično pravo</a></li>
+            <li><a href="#" class="dropdown_link">Radno pravo</a></li>
+            <li><a href="#" class="dropdown_link">Porodično pravo</a></li>
+            <li><a href="#" class="dropdown_link">Nasledno pravo</a></li>
+            <li><a href="#" class="dropdown_link">Prekršajno pravo</a></li>
+          </ul></li>
+
+        <li><a href="about-us.html" class="nav_link">o nama</a></li>
+
+        <li><a href="blog.html" class="nav_link">blog</a></li>
+
+        <li>
+          <a href="contact.html" class="nav_link active">kontakt</a>
+        </li>
+
+        <li>
+          <a href="contact.html" class="nav_link nav_link_btn"
+            >Zakaži konsultacije</a
+          >
+        </li>
+      </ul>
+    </div>
+
+      <div class="nav__hamburger" id="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line hamburger__line--mid"></div>
+        <div class="hamburger__line"></div>
+      </div>
+    
+    </nav>
+    <!--Nav section ends-->
+
+    <script src="src/scripts/main.js"></script>
+  </body>
+</html>
