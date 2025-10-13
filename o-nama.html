@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Nama | Ranković Legal</title>
+    <link rel="icon" href="src/assets/img/favicon-1-150x150.png" sizes="32x32">
+    <link rel="icon" href="src/assets/img/favicon-1-300x300.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="src/assets/img/favicon-1-300x300.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/css/style.css">
+    <script src="./src/scripts/main.js" type="module"></script>
+</head>
+
+<body>
+    <navigation-section-component active-page="about-us" data-deep-segment="oblasti-prava/"></navigation-section-component>
+    <header>
+
+    </header>
+    <main>
+        <section class="about-us-section">
+            <div class="about-us-section__content container-l">
+                <div class="text-block">
+                    <h2 class="text-block__title">O nama</h2>
+                    <p class="text-block__text">Naša advokatska kancelarija posvećena je pružanju sveobuhvatne pravne
+                        zaštite i savetovanja, sa
+                        fokusom na potrebe svakog klijenta. Verujemo da se poverenje gradi kroz stručnost, odgovornost i
+                        jasnu komunikaciju. Zato nam je prioritet da vas pažljivo saslušamo, razumemo specifičnost vašeg
+                        slučaja i ponudimo rešenja koja su praktična, efikasna i prilagođena upravo vama.</p>
+                    <p class="text-block__text">Oblast našeg rada obuhvata radno, imovinsko, porodično, privredno i
+                        ugovorno pravo, kao i
+                        zastupanje u sudskim i upravnim postupcima. Bilo da je reč o zaštiti vaših prava, rešavanju
+                        sporova ili prevenciji potencijalnih problema, naš cilj je da budemo vaš siguran partner u
+                        svakoj pravnoj situaciji.</p>
+                    <p class="text-block__text">Sa iskustvom u radu sa fizičkim licima i kompanijama, znamo koliko je
+                        pravna podrška važna za
+                        donošenje pravih odluka. Naš zadatak je da vam obezbedimo sigurnost i mir, dok se vi fokusirate
+                        na ono što je zaista važno u vašem životu ili poslovanju.</p>
+                </div>
+                <picture class="image-block">
+                    <img src="./src/assets/img/about-us-2.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        <section class="results-section">
+            <div class="results-section__content container-s">
+                <h2 class="results-section__content-title">Naši rezultati</h2>
+                <p class="results-section__content-text">Godinama pružamo profesionalnu pravnu podršku našim klijentima,
+                    sa fokusom na praktična rešenja i zaštitu njihovih interesa. U tom periodu smo stekli značajno
+                    iskustvo i ostvarili brojne uspehe, što potvrđuju naši zadovoljni klijenti i rezultati koje smo
+                    postigli.</p>
+                <counters-component></counters-component>
+            </div>
+        </section>
+        <practice-section-component>
+            <practice-section-tile-component data-title="Nasledno pravo" data-text="Postoje dva načina nasleđivanja u srpskom pravu - nasleđivanje po osnovu zakona i po
+                osnovu zaveštanja..." data-background-img="./src/assets/img/inheritance-law.jpg">
+            </practice-section-tile-component>
+            <practice-section-tile-component data-title="Radno pravo" data-text="Potreba da se angažuje advokat za radno pravo može da se javi u različitim
+                situacijama vezanim za radni odnos ili radno pravo..."
+                data-background-img="./src/assets/img/employment-law.jpg">
+            </practice-section-tile-component>
+            <practice-section-tile-component data-title="Ugovorno pravo" data-text="Ugovorno pravo je grana prava koja se bavi regulisanjem pravnih odnosa između
+                ugovornih strana..." data-background-img="./src/assets/img/contract-law.jpg">
+            </practice-section-tile-component>
+        </practice-section-component>
+        <contact-section-component></contact-section-component>
+    </main>
+    <footer-section-component data-deep-segment="oblasti-prava/"></footer-section-component>
+</body>
+
+</html>

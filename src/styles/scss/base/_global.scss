@@ -27,39 +27,37 @@ html {
 body {
   font-family: $font-family;
   font-size: 1.6rem;
-  line-height: 1.4;
-  background-color: $bg-color-light;
+  line-height: 1.6;
+  font-weight: 400;
+  background-color: $bg-color-dark;
   color: $light-color;
   min-height: 100vh;
 }
 
 .container {
-  width: 80%;
-  margin: auto;
-}
+  width: 100%;
+  margin-inline: auto;
 
-section {
-  padding: 9rem 0;
+  &-l {
+    @extend .container;
+    width: 90%;
+    max-width: 124.6rem;
+  }
 
-  @include rwd(576) {
-    padding: 7rem 0;
+  &-m {
+    @extend .container;
+    width: 90%;
+    max-width: 119.6rem;
+  }
+
+  &-s {
+    @extend .container;
+    width: 90%;
+    max-width: 96.1rem;
   }
 }
 
 img {
-  max-width: 100%;
   object-fit: cover;
   vertical-align: middle;
-}
-
-h1 {
-  // Test, remove later
-  //font-size: 2.5rem;
-  //color: #641d1d;
-  //text-align: center;
-  //margin-bottom: 20px;
-}
-
-span {
-  color: $primary-color;
 }

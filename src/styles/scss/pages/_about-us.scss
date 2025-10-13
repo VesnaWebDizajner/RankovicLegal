@@ -1,0 +1,136 @@
+@use "../abstracts/index" as *;
+
+.about-us-section {
+    background: $bg-color-quaternary;
+    padding-block: 9.6rem;
+    color: $dark-color;
+
+    &__content {
+        display: flex;
+        gap: 11.5rem;
+
+        @include rwd(1200) {
+            flex-direction: column;
+            gap: 8rem;
+        }
+
+        .text-block {
+            &__title {
+                font-size: 3.2rem;
+                line-height: 3.5rem;
+                font-weight: 600;
+                margin-block: 1.1rem 2.4rem;
+                padding-inline-start: 2.1rem;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    height: 100%;
+                    width: .4rem;
+                    background-color: $primary-color;
+                }
+            }
+
+            &__text {
+                line-height: 2.6rem;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 2.6rem;
+                }
+            }
+        }
+
+        .image-block {
+            max-width: 48.6rem;
+            max-height: 47.1rem;
+
+            @include rwd(1200) {
+                margin-inline: auto;
+            }
+
+            img {
+                border-radius: .6rem;
+
+                @include rwd(1200) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.results-section {
+    padding-block: 12.9rem 12.8rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../assets/img/about-us-3.jpg) no-repeat center bottom;
+    background-size: cover;
+
+    @include rwd(1440) {
+        background: url(../../assets/img/about-us-3-1440.jpg) no-repeat center/cover;
+    }
+
+    &__content {
+        text-align: center;
+
+        &-title {
+            font-size: 3.6rem;
+            line-height: 4.3rem;
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+        }
+
+        &-text {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+            margin-bottom: 7rem;
+        }
+
+        .counters {
+            @include flex($flow: row wrap, $justify: space-between, $gap: 2rem);
+            position: relative;
+            scroll-margin-top: 12.9rem;
+
+            @include rwd(992) {
+                row-gap: 6rem;
+            }
+
+            @include rwd(576) {
+                @include flex($flow: column, $justify: center, $gap: 6rem);
+            }
+
+            .counters__item {
+                &:last-of-type {
+                    @include rwd(822) {
+                        margin-inline: auto;
+                    }
+
+                    @include rwd(611) {
+                        margin-inline: unset;
+                    }
+                }
+
+                &__number {
+                    font-size: 4.8rem;
+                    line-height: 5.8rem;
+                    color: $primary-color;
+                    text-align: center;
+                    font-weight: 700;
+                    margin-bottom: .8rem;
+
+                    @include rwd(576) {
+                        font-size: 3.6rem;
+                    }
+                }
+
+                &__text {
+                    font-weight: 500;
+                    line-height: 2.2rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    max-width: 17rem;
+                }
+            }
+        }
+    }
+}

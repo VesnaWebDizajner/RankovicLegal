@@ -1,10 +1,13 @@
 @use "base/global";
 
+@use "components/icons";
 @use "components/buttons";
 @use "components/social-icons";
 
-@use "layout/nav";
-@use "layout/footer";
+@use "layout/navigation-section";
+@use "layout/contact-section";
+@use "layout/practice-section";
+@use "layout/footer-section";
 
 @use "pages/home";
 @use "pages/blog";
