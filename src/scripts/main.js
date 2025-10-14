@@ -4,6 +4,7 @@ import "./components/practice-section-component.js";
 import "./components/contact-section-component.js";
 import "./components/footer-section-component.js";
 import "./components/counters-component.js";
+import "./components/top-bar-component.js";
 
 // // Function to toggle the background color visibility of the navigation bar on scrolling
 // (function () {

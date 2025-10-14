@@ -3,11 +3,6 @@
 .about-hero {
     background: url(../../assets/img/about-us-1.jpg) no-repeat center;
 
-    &__top-bar {
-        height: 4rem;
-        background-color: $primary-color;
-    }
-
     &__content {
         padding-block: 23.1rem 14.5rem;
         text-align: center;

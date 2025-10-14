@@ -3,11 +3,6 @@
 .home-hero {
   background: url(../../assets/img/lawyer-environment.jpg) no-repeat center;
 
-  &__top-bar {
-    height: 4rem;
-    background-color: $primary-color;
-  }
-
   &__content {
     padding-block: 27.1rem 19.2rem;
 
@@ -96,6 +91,7 @@
     color: $dark-color;
 
     @include rwd(1240) {
+
       &__txt-box,
       &__list-box {
         flex: 1;
@@ -223,6 +219,7 @@
     }
 
     @include rwd(1240) {
+
       &__img-block,
       &__txt-block {
         flex: 1;

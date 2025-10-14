@@ -1,0 +1,96 @@
+@use "../abstracts/index" as *;
+
+.top-bar {
+  background: $dark-color;
+
+  @include rwd(720) {
+    display: none !important;
+  }
+
+  &__info {
+    @include flex($justify: flex-start);
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+
+    @include rwd(992) {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+
+    &-item {
+      @include flex;
+      padding-block: 1.2rem;
+      padding-inline: 3.6rem;
+      border-right: .1rem solid $light-color;
+      border-right-style: inset;
+      white-space: nowrap;
+
+      @include rwd(992) {
+        padding-inline: 2rem;
+      }
+
+      &:first-child {
+        padding-inline-start: 0;
+
+        span {
+            margin-inline-end: .5rem;
+            font-weight: 700;
+        }
+
+        i {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      &:nth-child(2) {
+        i {
+          width: 1.7rem;
+          height: 1.2rem;
+        }
+      }
+
+      &:nth-child(3) {
+        border: none;
+
+        i {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+
+      &:last-child {
+        padding-inline-end: 0;
+        margin-inline-start: auto;
+        border: none;
+
+        a {
+          height: 1.4rem;
+
+          i {
+            width: 1.4rem;
+            height: 1.4rem;
+            background: $light-color;
+            vertical-align: unset;
+          }
+        }
+      }
+
+      i {
+        &:not(.icon-in) {
+          margin-inline-end: 1.6rem;
+
+          @include rwd(992) {
+            margin-inline-end: 1.3rem;
+          }
+        }
+      }
+
+      a {
+        &::first-letter {
+            text-transform: none;
+        }
+      }
+    }
+  }
+}
