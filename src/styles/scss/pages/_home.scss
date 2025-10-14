@@ -31,13 +31,11 @@
     &-title {
       font-size: 9.6rem;
       font-weight: 700;
-      line-height: 11.5rem;
+      line-height: 9.6rem;
       text-transform: uppercase;
       margin-inline-start: -.7rem;
-      margin-block-start: -1rem;
 
       @include rwd(768) {
-        margin-block-start: 0;
         font-size: 4.8rem;
         line-height: 6.7rem;
       }
