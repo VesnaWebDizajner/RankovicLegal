@@ -12,83 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/styles/css/style.css">
     <script src="./src/scripts/main.js" type="module"></script>
 </head>
 
 <body>
-    <!--Top__bar section starts-->
-    <!-- <div class="top_bar">
-        <div class="container">
-            <div class="info_item">
-                <i class="fa-solid fa-clock"></i>
-                <p><strong>Pon-Pet </strong>09:00 - 17:00</p>
-            </div>
-            <div class="line"></div>
-            <div class="info_item">
-                <i class="fa-regular fa-envelope"></i>
-                <a href="mailto:adv.andrijarankovic@gmail.com" class="mail">adv.andrijarankovic@gmail.com</a>
-            </div>
-            <div class="line"></div>
-            <div class="info_item">
-                <i class="fa-solid fa-phone"></i>
-                <a href="" tel:+381638799247"">+381 63 87 99 247</a>
-            </div>
-
-            <a href="https://www.linkedin.com/in/andrija-rankovi%C4%87-23626131b/" target="_blank" class="bar_link">
-                <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-        </div>
-    </div> -->
-    <!--Top__bar section ends-->
-
-    <!--Nav section starts-->
-    <!-- <nav class="nav">
-        <div class="nav_wrapper container">
-            <img src="./src/assets/img/rankovic-logo.svg" alt="logo" class="nav_logo" />
-
-            <ul class="nav_list">
-                <li>
-                    <a href="home.html" class="nav_link active">početna</a>
-                </li>
-                <li class="nav_item dropdown">oblasti prava <i class="fa-solid fa-angle-down"></i>
-                    <ul class="dropdown_menu">
-                        <li><a href="#" class="dropdown_link">Krivično pravo</a></li>
-                        <li><a href="#" class="dropdown_link">Radno pravo</a></li>
-                        <li><a href="#" class="dropdown_link">Porodično pravo</a></li>
-                        <li><a href="#" class="dropdown_link">Nasledno pravo</a></li>
-                        <li><a href="#" class="dropdown_link">Prekršajno pravo</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="about-us.html" class="nav_link">o nama</a></li>
-
-                <li><a href="blog.html" class="nav_link">blog</a></li>
-
-                <li>
-                    <a href="contact.html" class="nav_link">kontakt</a>
-                </li>
-
-                <li>
-                    <a href="contact.html" class="nav_link nav_link_btn">Zakaži konsultacije</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="nav__hamburger" id="hamburger">
-            <div class="hamburger__line"></div>
-            <div class="hamburger__line hamburger__line--mid"></div>
-            <div class="hamburger__line"></div>
-        </div>
-
-    </nav> -->
-    <!--Nav section ends-->
-    <navigation-section-component active-page="home" data-deep-segment="oblasti-prava/"></navigation-section-component>
-
-    <header >
+    <header>
         <top-bar-component></top-bar-component>
+        <navigation-section-component active-page="home"
+            data-deep-segment="oblasti-prava/"></navigation-section-component>
         <section class="home-hero">
             <div class="home-hero__content container-l">
                 <h2 class="home-hero__content-suptitle">Advokatska kancelarija</h2>
@@ -100,7 +32,6 @@
             </div>
         </section>
     </header>
-
     <main>
         <section class="law-section" id="pouzdan-partner">
             <div class="law-section__content container-l">
@@ -153,7 +84,6 @@
                 </ul>
             </div>
         </section>
-
         <section class="justice-section">
             <div class="justice-section__content container-l">
                 <picture class="justice-section__content__img-block">
@@ -189,7 +119,6 @@
         </practice-section-component>
         <contact-section-component></contact-section-component>
     </main>
-
     <footer-section-component data-deep-segment="oblasti-prava/"></footer-section-component>
 </body>
 

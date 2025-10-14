@@ -454,6 +454,9 @@ img {
   transform: translateX(0);
 }
 
+.contact-section {
+  scroll-margin-top: 9.8rem;
+}
 .contact-section__title {
   font-size: 4rem;
   font-weight: 700;
@@ -1040,6 +1043,7 @@ img {
 
 .law-section {
   background-color: #f6f6f6;
+  scroll-margin-top: 9.8rem;
 }
 .law-section__content {
   display: flex;

@@ -1,6 +1,8 @@
 @use "../abstracts/index" as *;
 
 .contact-section {
+    scroll-margin-top: $scrolMarginTop;
+    
     &__title {
         font-size: 4rem;
         font-weight: 700;
