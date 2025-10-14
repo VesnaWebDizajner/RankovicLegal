@@ -55,4 +55,22 @@
         -webkit-mask: url("../../assets/img/icons/arrow-down-icon.svg") no-repeat center / 100% 100%;
         mask: url("../../assets/img/icons/arrow-down-icon.svg") no-repeat center / 100% 100%;
     }
+
+    &-law-1 {
+        @extend .icon;
+        -webkit-mask: url("../../assets/img/icons/law-1-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/law-1-icon.svg") no-repeat center / 100% 100%;
+    }
+
+    &-law-2 {
+        @extend .icon;
+        -webkit-mask: url("../../assets/img/icons/law-2-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/law-2-icon.svg") no-repeat center / 100% 100%;
+    }
+
+    &-law-3 {
+        @extend .icon;
+        -webkit-mask: url("../../assets/img/icons/law-3-icon.svg") no-repeat center / 100% 100%;
+        mask: url("../../assets/img/icons/law-3-icon.svg") no-repeat center / 100% 100%;
+    }
 }

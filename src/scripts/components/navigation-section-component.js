@@ -15,7 +15,7 @@ class NavigationSectionComponent extends HTMLElement {
                         </label>
 
                         <a href="${pathStepBack}index.html" class="nav__logo">
-                            <img src="${pathStepBack}src/assets/img/rankovic.png" alt="Tiny's desktop logo" class="nav__logo-desktop">
+                            <img src="${pathStepBack}src/assets/img/rankovic-logo.svg" alt="Ranković logo" class="nav__logo-desktop">
                         </a>
 
                         <ul class="nav__list">

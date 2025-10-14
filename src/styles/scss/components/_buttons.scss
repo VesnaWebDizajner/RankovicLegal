@@ -1,40 +1,55 @@
 @use '../abstracts/index' as *;
 
 .bttn {
-    display: inline-block;
-    background: transparent;
-    color: $primary-color;
-    padding: 1.5rem;
-    line-height: 110%;
+    display: inline-flex;
+    background: #000000D9;
+    color: $light-color;
+    padding-block: 1.4rem;
+    padding-inline: 2.5rem;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
     font-weight: 500;
     white-space: nowrap;
     text-align: center;
     border-radius: .5rem;
-    text-transform: capitalize;
+    border: 0.1rem solid $primary-color;
     cursor: pointer;
+    gap: 1rem;
 
-    @include rwd(568) {
-        width: 100%;
-        max-width: 16.3rem;
-    }
-
-    &:hover {
-        background-color: $primary-color;
-        color: $dark-color;
+    &::first-letter {
+        text-transform: uppercase;
     }
 
     &-primary {
         @extend .bttn;
-        background-color: $primary-color;
-        color: $light-color;
+        border: none;
+        padding-block: 1.5rem;
+
+        &-m {
+            @extend .bttn-primary;
+            background: $bttn-bg-primary-m;
+        }
+
+        &-l {
+            @extend .bttn-primary;
+            background: $bttn-bg-primary-l;
+            font-size: 1.6rem;
+            line-height: 1.8rem;
+        }
     }
 
     &-secondary {
         @extend .bttn;
-        padding: 1.7rem;
-        min-width: 22.2rem;
+        border: none;
+        padding-block: 1.5rem;
+        padding-inline: 4.5rem;
         background-color: $dark-color;
-        color: $light-color;
+        font-size: 1.6rem;
         line-height: 2rem;
+        box-shadow: 0 0 1.4rem 0 #0000001F;
+    }
+
+    &:hover {
+        background: $primary-color;
     }
 }

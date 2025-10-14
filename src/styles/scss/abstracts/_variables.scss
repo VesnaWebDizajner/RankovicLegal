@@ -2,9 +2,10 @@
 $primary-color: #967745;
 $light-color: #fff;
 $dark-color: #111;
-$bttn-bg-primary: linear-gradient($primary-color, #302616);
+$bttn-bg-primary-m: linear-gradient(90deg, $primary-color 0%, #302616 140.06%);
+$bttn-bg-primary-l: linear-gradient(90deg, $primary-color 0%, #302616 259.51%);
 $bttn-bg-secondary: $dark-color;
-$bg-color-primary: linear-gradient(#927443, #766240);
+$bg-color-primary: linear-gradient(90deg, #927443, #766240 329.46%);
 $bg-color-secondary: #f6f6f6;
 $bg-color-tertiary: linear-gradient(to right, #222222, #000000);
 $bg-color-quaternary: linear-gradient(135deg, #f6f6f6 40%, #999 100%);
@@ -12,4 +13,5 @@ $bg-color-light: $light-color;
 $bg-color-dark: #000;
 
 // Fonts
-$font-family: "Montserrat", sans-serif;
+$font-family: "Montserrat", sans-serif
+

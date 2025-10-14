@@ -1,375 +1,282 @@
 @use "../abstracts/index" as *;
 
-// ---Top__bar meni--- //
-.top_bar {
-  @include position(relative, 0, auto, auto, 0, 100%, 40px);
-  background-color: $dark-color;
+.home-hero {
+  background: url(../../assets/img/lawyer-environment.jpg) no-repeat center;
 
-  .container {
-    @include flex(space-between, center, 36px, row nowrap);
-
-    .info_item {
-      @include flex(space-between, center, 16px, row nowrap);
-      height: auto;
-
-      i {
-        color: $primary-color;
-      }
-
-      P {
-        font-size: 14px;
-        color: $light-color;
-
-        strong {
-          font-weight: 700;
-        }
-
-        &.mail {
-          text-transform: none;
-        }
-      }
-
-      a {
-        color: $light-color;
-      }
-    }
-
-    .line {
-      width: 0.5px;
-      height: 40px;
-      background-color: $light-color;
-    }
-
-    .bar_link {
-      margin-left: auto;
-    }
-  }
-}
-
-//  Responsive za ekran manje od 1200px
-@media (max-width: 1200px) {
-  .top_bar {
-    display: none;
-  }
-}
-
-// ---Header section--- //
-
-.header {
-  @include position(relative, 100%, auto, auto, auto, 100%, 100svh);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../img/lawyer-environment.jpg);
-  background-size: cover;
-  background-position: center;
-
-  &_wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 1200px;
-    padding: 0 20px;
-    height: 100%;
-    text-align: left;
-    position: relative;
+  &__top-bar {
+    height: 4rem;
+    background-color: $primary-color;
   }
 
-  &_heading {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 28px;
+  &__content {
+    padding-block: 27.1rem 19.2rem;
 
-    @include rwd(768px) {
-      font-size: 28px;
+    @include rwd(768) {
       text-align: center;
-      width: 400px;
     }
 
-    span {
+    &-suptitle {
+      font-size: 2.8rem;
       font-weight: 400;
-      display: block;
-    }
-
-    &_p {
-      font-weight: 700;
-      font-size: 96px;
+      line-height: 3.1rem;
       text-transform: uppercase;
-    }
-  }
+      color: $primary-color;
 
-  &_p {
-    font-size: 16px;
-    max-width: 600px;
-    margin: 20px auto 0;
-    font-weight: normal;
-  }
-
-  &_btns {
-    @include flex(inline-flex, center, 16px, row wrap);
-    margin-top: 24px;
-    gap: 20px;
-
-    .header_btn_one {
-      display: inline-flex;
-      background: linear-gradient(90deg, #967745 40%, #786039 100%);
-      background-color: $primary-color;
-      color: $light-color;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: darken($primary-color, 5%);
+      @include rwd(768) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
       }
 
-      i {
-        font-size: 16px;
-        margin: 0 6px;
-        color: $light-color;
+      @include rwd(320) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
       }
     }
 
-    .header_btn_two {
-      display: inline-flex;
-      background: transparent;
-      color: $light-color;
-      padding: 10px 25px;
-      text-decoration: none;
-      border: 1px solid $primary-color;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
-  }
-}
+    &-title {
+      font-size: 9.6rem;
+      font-weight: 700;
+      line-height: 11.5rem;
+      text-transform: uppercase;
+      margin-inline-start: -.7rem;
+      margin-block-start: -1rem;
 
-// ---Law section--- //
-
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
-  padding: 40px 0;
-
-  .law,
-  .services {
-    flex: 1;
-  }
-
-  .law {
-    margin-top: 70px;
-    .law_heading {
-      text-align: left;
-
-      h2 {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0 0 10px;
-        color: $dark-color;
-        margin-bottom: 30px;
+      @include rwd(768) {
+        margin-block-start: 0;
+        font-size: 4.8rem;
+        line-height: 6.7rem;
       }
 
-      .law_heading_line {
-        width: 55px;
-        border-bottom: 4px solid $primary-color;
-        margin: 10px 0 20px;
-      }
-
-      .law_description {
-        font-size: 16px;
-        color: $dark-color;
-        max-width: 600px;
-        line-height: 1.6;
-        margin-top: 30px;
+      @include rwd(320) {
+        font-size: 3.8rem;
+        line-height: 5.7rem;
       }
     }
-  }
 
-  .services {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+    &-text {
+      line-height: 2.6rem;
+      margin-bottom: 4rem;
 
-    .service_card {
-      display: flex;
-      align-items: center;
-      background-color: $light-color;
-      border-radius: 0;
-      padding: 24px;
-      transition: transform 0.3s ease;
-
-      .service_icon {
-        .icon_background {
-          background-color: $dark-color;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          img {
-            width: 17px;
-            height: 25px;
-
-            object-fit: contain;
-          }
-        }
+      @include rwd(768) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
       }
 
-      .service_text {
-        h3 {
-          font-size: 16px;
-          font-weight: 700;
-          color: #000;
-          margin-bottom: 8px;
-          margin-left: 30px;
-        }
-
-        p {
-          font-size: 14px;
-          color: #333;
-          line-height: 1.5;
-          margin-left: 30px;
-        }
-      }
-
-      &.highlighted {
-        background: linear-gradient(90deg, #967745 40%, #786039 100%);
-        border-radius: 20px 20px 0 0;
-        color: #fff;
-
-        .service_text {
-          h3,
-          p {
-            color: #fff;
-          }
-        }
-
-        .service-icon img {
-          filter: brightness(0) invert(1);
-        }
+      @include rwd(320) {
+        font-size: 1.2rem;
+        line-height: 2rem;
       }
     }
-  }
 
-  //  Responsive
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
+    .bttn-primary-m {
+      margin-inline-end: 1.6rem;
 
-    .law,
-    .services {
-      width: 100%;
+      @include rwd(380) {
+        display: flex;
+        margin-inline: auto;
+        margin-block-end: 2rem;
+      }
     }
 
-    .law .law_heading {
-      text-align: center;
-
-      .law_description {
-        text-align: center;
-        margin: 0 auto;
-      }
-
-      .law_heading_line {
-        margin-left: auto;
-        margin-right: auto;
+    .bttn {
+      @include rwd(380) {
+        display: flex;
+        margin-inline: auto;
       }
     }
   }
 }
 
-// ---Hero section--- //
+.law-section {
+  background-color: $bg-color-secondary;
 
-.hero {
-  width: 100%;
-  background-color: $dark-color;
-  color: #fff;
-  padding: 80px 0;
+  &__content {
+    @include flex($justify: space-between, $align: center, $gap: 8rem);
+    padding-block: 7.4rem;
+    color: $dark-color;
 
-  .hero_wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    @include rwd(1240) {
+      &__txt-box,
+      &__list-box {
+        flex: 1;
+      }
+    }
 
-    @media (max-width: 1024px) {
+    @include rwd(992) {
       flex-direction: column;
     }
-  }
 
-  .hero_image {
-    flex: 1;
-    transform: scaleX(-1);
+    &__txt-box {
+      max-width: 58.5rem;
+    }
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
+    &__list-box {
+      max-width: 56rem;
+    }
 
-      @media (max-width: 1024px) {
-        max-width: 300px;
-        margin: 0 auto;
+    .txt-box {
+      &__title {
+        font-size: 4.8rem;
+        line-height: 5.3rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        max-width: 58.5rem;
+
+        @include rwd(992) {
+          text-align: center;
+        }
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      &__text {
+        line-height: 2.6rem;
+
+        @include rwd(992) {
+          text-align: center;
+        }
+      }
+    }
+
+    hr {
+      width: 5.5rem;
+      height: 0.4rem;
+      background-color: $primary-color;
+      margin-block: 3.6rem 3.5rem;
+
+      @include rwd(992) {
+        margin-inline: auto;
+      }
+    }
+
+    .list-box {
+      &__item {
+        @include flex($justify: center, $align: center, $gap: 3.3rem);
+        padding-block: 3.2rem 2.6rem;
+        padding-inline: 3.7rem 2.7rem;
+
+        &:first-child {
+          i {
+            width: 1.7rem;
+          }
+        }
+
+        &:nth-child(2) {
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+          background: $bg-color-primary;
+          color: $light-color;
+          box-shadow: -.7rem .4rem 1.03rem 0 #00000040 inset;
+
+          i {
+            width: 1.9rem;
+          }
+        }
+
+        &:last-child {
+          i {
+            width: 2.5rem;
+          }
+        }
+
+        .icon-box {
+          background-color: $dark-color;
+          border-radius: 50%;
+          width: 6.4rem;
+          line-height: 6.4rem;
+          flex-shrink: 0;
+          text-align: center;
+
+          i {
+            height: 2.5rem;
+          }
+        }
+
+        &-title {
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 2.5rem;
+          margin-bottom: .8rem;
+          text-transform: uppercase;
+        }
+
+        &-text {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+        }
       }
     }
   }
+}
 
-  .hero_content {
-    flex: 1;
-    max-width: 600px;
-    text-align: right;
+.justice-section {
+  padding-block-start: 9.1rem;
 
-    h1 {
-      font-size: 56px;
-      font-weight: 700;
+  &__content {
+    @include flex($justify: space-between, $align: center, $gap: 7rem);
+
+    @include rwd(992) {
+      flex-direction: column;
+      gap: 8rem;
+    }
+
+    @include rwd(1240) {
+      &__img-block,
+      &__txt-block {
+        flex: 1;
+      }
+    }
+
+    &__img-block {
+      margin-top: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__txt-block {
+      max-width: 59.1rem;
+      text-align: end;
       text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 10px;
+      padding-block-end: 7rem;
 
-      @media (max-width: 1024px) {
-        font-size: 28px;
-      }
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 400;
-      color: $primary-color;
-      margin-bottom: 20px;
-
-      @media (max-width: 1024px) {
-        font-size: 18px;
-      }
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #ddd;
-      margin-bottom: 20px;
-
-      @media (max-width: 1024px) {
+      @include rwd(992) {
         text-align: center;
-        font-size: 14px;
-        margin: auto;
+        padding-block-end: 9.1rem;
       }
     }
+  }
 
-    .signature {
-      font-size: 14px;
-      font-weight: 500;
-      color: $primary-color;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+  .txt-block {
+    &__title {
+      font-size: 5.6rem;
+      line-height: 6.7rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
     }
 
-    @media (max-width: 1024px) {
-      text-align: center;
-      margin: 0 auto;
+    &__subtitle {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      font-weight: 400;
+      margin-bottom: 3.6rem;
+      color: $primary-color;
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      text-transform: initial;
+    }
+
+    &__signature {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      color: $primary-color;
+      margin-top: 1.6rem;
     }
   }
 }
