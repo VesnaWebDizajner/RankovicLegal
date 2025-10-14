@@ -68,6 +68,7 @@ class ContactSectionComponent extends HTMLElement {
         this.style.background = background;
         this.style.paddingBlock = paddingBlock;
         this.classList.add("contact-section");
+        this.id = "kontakt-forma";
         this.role = "region";
         this.ariaLabel = "Kontakt forma"
     }

@@ -1126,6 +1126,53 @@ img {
   margin-top: 1.6rem;
 }
 
+.about-hero {
+  background: url(../../assets/img/about-us-1.jpg) no-repeat center;
+}
+.about-hero__top-bar {
+  height: 4rem;
+  background-color: #967745;
+}
+.about-hero__content {
+  padding-block: 23.1rem 14.5rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .about-hero__content {
+    text-align: center;
+  }
+}
+.about-hero__content-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 5.8rem;
+  margin-block-end: 1.6rem;
+}
+@media (max-width: 320px) {
+  .about-hero__content-title {
+    font-size: 3.8rem;
+    line-height: 4.7rem;
+  }
+}
+.about-hero__content-text {
+  font-size: 1.8rem;
+  line-height: 2.9rem;
+  margin-block-end: 2.4rem;
+}
+@media (max-width: 768px) {
+  .about-hero__content-text {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-block-end: 4rem;
+  }
+}
+.about-hero__content .bttn-primary-m {
+  background: linear-gradient(90deg, #967745 0%, #302616 259.51%);
+}
+.about-hero__content .bttn-primary-m:hover {
+  background: #967745;
+}
+
 .about-us-section {
   background: linear-gradient(135deg, #f6f6f6 40%, #999 100%);
   padding-block: 9.6rem;

@@ -1,5 +1,55 @@
 @use "../abstracts/index" as *;
 
+.about-hero {
+    background: url(../../assets/img/about-us-1.jpg) no-repeat center;
+
+    &__top-bar {
+        height: 4rem;
+        background-color: $primary-color;
+    }
+
+    &__content {
+        padding-block: 23.1rem 14.5rem;
+        text-align: center;
+
+        @include rwd(768) {
+            text-align: center;
+        }
+
+        &-title {
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 5.8rem;
+            margin-block-end: 1.6rem;
+
+            @include rwd(320) {
+                font-size: 3.8rem;
+                line-height: 4.7rem;
+            }
+        }
+
+        &-text {
+            font-size: 1.8rem;
+            line-height: 2.9rem;
+            margin-block-end: 2.4rem;
+
+            @include rwd(768) {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                margin-block-end: 4rem;
+            }
+        }
+
+        .bttn-primary-m {
+            background: $bttn-bg-primary-l;
+
+            &:hover {
+                background: $primary-color;
+            }
+        }
+    }
+}
+
 .about-us-section {
     background: $bg-color-quaternary;
     padding-block: 9.6rem;
