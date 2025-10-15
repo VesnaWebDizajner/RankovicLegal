@@ -47,6 +47,10 @@
         font-size: 1.6rem;
         line-height: 2rem;
         box-shadow: 0 0 1.4rem 0 #0000001F;
+
+        @include rwd(768) {
+            padding-inline: 2.5rem;
+        }
     }
 
     &:hover {

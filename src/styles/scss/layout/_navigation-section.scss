@@ -1,21 +1,21 @@
 @use "../abstracts/index" as *;
 
 .navigation-section {
-    @include positioning($position: fixed, $top: 0, $left: 0, $width: 100%);
+    @include positioning($position: sticky, $top: 0, $left: 0, $width: 100%);
     background: transparent;
-    padding: 2.4rem 6.4rem;
-    z-index: 1;
+    padding-block: 3rem;
+    z-index: 2;
 
-    @include rwd(576) {
-        padding: 0 3.2rem;
-    }
-
-    &.scrolled {
-        background-color: $dark-color;
+    @include rwd(1200) {
+        padding-block: 3rem 0;
     }
 
     .nav {
         @include flex($justify: space-between);
+
+        @include rwd(768) {
+            display: block;
+        }
 
         &__logo {
             @include rwd(1200) {
@@ -41,7 +41,7 @@
         }
 
         &__list {
-            @include flex($justify: flex-start, $gap: 3.2rem);
+            @include flex($justify: flex-start, $gap: 3rem);
 
             @include rwd(1200) {
                 display: none;
@@ -58,6 +58,7 @@
                 }
 
                 &-menu {
+                    pointer-events: none;
                     opacity: 0;
                     position: absolute;
                     top: calc(100% + 20rem);
@@ -89,6 +90,7 @@
 
                 &:hover {
                     .dropdown-menu {
+                        pointer-events: all;
                         opacity: 1;
                         top: calc(100% + 1rem);
 
@@ -110,13 +112,16 @@
                     }
                 }
             }
+
+            li {
+                line-height: 1.8rem;
+            }
         }
 
         &__link {
-            font-size: 1.4rem;
-            text-transform: uppercase;
+            display: inline-block;
 
-            &:not(.nav__link--btn) {
+            &:not(.bttn-primary-l) {
                 font-weight: 500;
 
                 &:hover,
@@ -124,19 +129,40 @@
                     color: $primary-color ;
                 }
             }
+
+            &.bttn-primary-l {
+                margin-inline-start: .7rem;
+            }
         }
 
         &__hamburger {
             @include flex($justify: space-between, $align: stretch, $flow: column);
-            width: 4rem;
-            height: 3rem;
+            width: 3rem;
+            height: 2rem;
             cursor: pointer;
             display: none;
+            position: relative;
+            margin-inline: 1rem;
+
+            @include rwd(1200) {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: calc(-50% - 3rem);
+                    left: calc(50% - 2rem);
+                    transform: translate(calc(-50% + 2rem), 50%);
+                    width: calc(100% + 2rem);
+                    height: calc(100% + 3rem);
+                    background-color: transparent;
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
 
             .line {
                 width: 100%;
                 height: .3rem;
-                background-color: $light-color;
+                background-color: $primary-color;
             }
 
             .line:nth-child(2) {
@@ -147,29 +173,33 @@
                 display: flex;
             }
 
-            @include rwd(576) {
-                width: 3rem;
-                height: 2rem;
+            @include rwd(768) {
+                margin-inline-start: auto;
             }
         }
 
         .mobile-menu {
             @include positioning($position: fixed, $top: 0, $bottom: 0, $left: 0, $width: 65%);
             @include flex($flow: column, $gap: 3.2rem);
-            background-color: $primary-color;
+            background-color: $dark-color;
             transform: translateX(-100%);
             padding: 0 1.6rem;
 
+            @include rwd(568) {
+                width: 100%;
+            }
+
             #close {
-                @include positioning($position: fixed, $top: 3rem, $right: 2rem);
-                color: $light-color;
+                @include positioning($position: fixed, $top: 1.5rem, $right: 2rem);
+                color: $primary-color;
                 font-size: 3.2rem;
+                font-style: normal;
                 cursor: pointer;
             }
 
             &__list {
                 text-align: center;
-                @include flex($flow: column, $gap: 2.4rem);
+                @include flex($flow: column, $gap: 2rem);
             }
 
             &__link {
@@ -180,23 +210,22 @@
                     color: $primary-color ;
                 }
             }
+        }
+    }
 
-            &__text {
-                font-size: 1.4rem;
-                margin-top: 2.4rem;
-                text-align: center;
+    &.scrolled {
+        background-color: $dark-color;
 
-                span {
-                    color: $primary-color;
-                }
-            }
+        @include rwd(1200) {
+            background-color: transparent;
+        }
 
-            &__icons {
-                display: flex;
-                gap: 3.2rem;
-
-                a {
-                    font-size: 1.8rem;
+        .nav {
+            &__hamburger {
+                @include rwd(1200) {
+                    &::before {
+                        background-color: $dark-color;
+                    }
                 }
             }
         }

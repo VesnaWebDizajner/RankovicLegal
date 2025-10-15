@@ -1,13 +1,33 @@
 @use "../abstracts/index" as *;
 
 .home-hero {
-  background: url(../../assets/img/lawyer-environment.jpg) no-repeat center;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 11rem);
+    background: url(../../assets/img/lawyer-environment.jpg) no-repeat center/cover;
+    z-index: -1;
+
+    @include rwd(1200) {
+      height: calc(100% + 5rem);
+      top: -5rem;
+    }
+  }
 
   &__content {
     padding-block: 27.1rem 19.2rem;
 
     @include rwd(768) {
       text-align: center;
+      padding-block: 0;
+      @include flex($flow: column, $align: center);
+      height: calc(100vh - 5rem);
     }
 
     &-suptitle {

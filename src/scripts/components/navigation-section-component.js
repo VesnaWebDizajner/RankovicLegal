@@ -43,11 +43,14 @@ class NavigationSectionComponent extends HTMLElement {
                             <li>
                                 <a href="${pathStepBack}kontakt.html" class="nav__link ${activePage === 'contact' ? 'active' : ''}">Kontakt</a>
                             </li>
+                            <a href="#kontakt-forma" class="nav__link bttn-primary-l" aria-label="Click to go on contact form section">
+                                Zakaži konsultacije
+                            </a>
                         </ul>
 
                         <div class="mobile-menu">
                             <label for="nav-toggle">
-                                <i class="fa-regular fa-circle-xmark" id="close"></i>
+                                <i id="close">X</i>
                             </label>
                             
                             <ul class="mobile-menu__list">
@@ -64,26 +67,9 @@ class NavigationSectionComponent extends HTMLElement {
                                     <a href="${pathStepBack}blog.html" class="mobile-menu__link ${activePage === 'blog' ? 'active' : ''}">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="${pathStepBack}kontakt.html" class="mobile-menu__link ${activePage === 'contact' ? 'active' : ''}">Kontact</a>
+                                    <a href="${pathStepBack}kontakt.html" class="mobile-menu__link ${activePage === 'contact' ? 'active' : ''}">Kontakt</a>
                                 </li>
                             </ul>
-
-                            <p class="mobile-menu__text">
-                                Transforming spaces, building dreams - <span>together</span> !
-                            </p>
-
-                            <div class="mobile-menu__icons">
-                                <a href="mailto:remodelingtiny@gmail.com" aria-label="Click to send email">
-                                    <i class="fa-regular fa-envelope"></i>
-                                </a>
-                                <a href="tel:+1 321 265 9840" aria-label="Click to call phone number">
-                                    <i class="fa-solid fa-phone"></i>
-                                </a>
-                                <a href="https://www.instagram.com/tinys_remodeling/" target="_blank"
-                                    aria-label="Click to see Instagram profile">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </div>
                         </div>
                     </nav>`;
 
