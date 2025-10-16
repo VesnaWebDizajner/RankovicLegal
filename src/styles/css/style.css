@@ -53,7 +53,7 @@ img {
   vertical-align: middle;
 }
 
-.icon, .icon-law-3, .icon-law-2, .icon-law-1, .icon-arrow-down, .icon-arrow-up, .icon-circle-arrow-right, .icon-in, .icon-map, .icon-envelope-2, .icon-envelope, .icon-phone, .icon-clock {
+.icon, .icon-check, .icon-law-3, .icon-law-2, .icon-law-1, .icon-arrow-right, .icon-arrow-down, .icon-arrow-up, .icon-circle-arrow-right-primary, .icon-circle-arrow-right, .icon-in, .icon-map, .icon-envelope-2, .icon-envelope, .icon-phone, .icon-clock {
   display: inline-block;
   width: min-content;
   width: 2.1rem;
@@ -89,6 +89,10 @@ img {
   -webkit-mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
   mask: url("../../assets/img/icons/circle-arrow-right-icon.svg") no-repeat center/100% 100%;
 }
+.icon-circle-arrow-right-primary {
+  -webkit-mask: url("../../assets/img/icons/circle-arrow-right-primary-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/circle-arrow-right-icon-primary.svg") no-repeat center/100% 100%;
+}
 .icon-arrow-up {
   -webkit-mask: url("../../assets/img/icons/arrow-up-icon.svg") no-repeat center/100% 100%;
   mask: url("../../assets/img/icons/arrow-up-icon.svg") no-repeat center/100% 100%;
@@ -96,6 +100,10 @@ img {
 .icon-arrow-down {
   -webkit-mask: url("../../assets/img/icons/arrow-down-icon.svg") no-repeat center/100% 100%;
   mask: url("../../assets/img/icons/arrow-down-icon.svg") no-repeat center/100% 100%;
+}
+.icon-arrow-right {
+  -webkit-mask: url("../../assets/img/icons/arrow-right-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/arrow-right-icon.svg") no-repeat center/100% 100%;
 }
 .icon-law-1 {
   -webkit-mask: url("../../assets/img/icons/law-1-icon.svg") no-repeat center/100% 100%;
@@ -108,6 +116,10 @@ img {
 .icon-law-3 {
   -webkit-mask: url("../../assets/img/icons/law-3-icon.svg") no-repeat center/100% 100%;
   mask: url("../../assets/img/icons/law-3-icon.svg") no-repeat center/100% 100%;
+}
+.icon-check {
+  -webkit-mask: url("../../assets/img/icons/check-icon.svg") no-repeat center/100% 100%;
+  mask: url("../../assets/img/icons/check-icon.svg") no-repeat center/100% 100%;
 }
 
 .bttn, .bttn-secondary, .bttn-primary, .bttn-primary-l, .bttn-primary-m {
@@ -511,6 +523,7 @@ img {
   padding-block: 1rem;
   padding-inline: 1rem;
   background-color: #fff;
+  box-shadow: 0 0 6rem 0 rgba(17, 17, 17, 0.1490196078);
 }
 @media (max-width: 800px) {
   .contact-section__box {
@@ -527,6 +540,7 @@ img {
   padding-inline: 4rem;
   position: relative;
   overflow: hidden;
+  color: #fff;
 }
 @media (max-width: 992px) {
   .contact-section__box .text-box {
@@ -638,8 +652,11 @@ img {
 .contact-section__box .form-box {
   flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  flex-flow: row wrap;
+  row-gap: 4.5rem;
   color: #111;
   padding-inline: 5rem 4rem;
   padding-block: 5.4rem 6rem;
@@ -693,7 +710,6 @@ img {
   font-size: 1.2rem;
   line-height: 2rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
 }
 @media (max-width: 992px) {
   .contact-section__box .form-box label {
@@ -990,6 +1006,234 @@ img {
 }
 .footer__copyright p:last-of-type span {
   font-weight: 700;
+}
+
+.law-aria-section {
+  background: #fff;
+  padding-block: 7.7rem 15.3rem;
+}
+.law-aria-section__content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8rem;
+  flex-flow: row nowrap;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .law-aria-section__content {
+    gap: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .law-aria-section__content {
+    flex-direction: column;
+  }
+}
+.law-aria-section__nav {
+  position: sticky;
+  top: 12rem;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: auto;
+  height: auto;
+  flex: 1;
+  max-width: 30.9rem;
+  background: #111;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 0.85rem 0.3rem rgba(0, 0, 0, 0.2509803922);
+  padding-block: 3.1rem;
+  padding-inline: 4.5rem;
+}
+@media (max-width: 992px) {
+  .law-aria-section__nav {
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .law-aria-section__nav {
+    position: initial;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+  }
+}
+.law-aria-section__nav-title {
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-block-end: 1.9rem;
+}
+@media (max-width: 768px) {
+  .law-aria-section__nav-title {
+    display: none;
+  }
+}
+.law-aria-section__nav-list {
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .law-aria-section__nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.6rem;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+  }
+}
+.law-aria-section__nav-list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  flex-flow: row nowrap;
+  transform: translateX(-2.6rem);
+}
+.law-aria-section__nav-list-item:not(:last-child) {
+  margin-block-end: 2rem;
+}
+@media (max-width: 768px) {
+  .law-aria-section__nav-list-item {
+    transform: unset;
+    white-space: nowrap;
+    margin-block-end: 1rem !important;
+  }
+}
+.law-aria-section__nav-list-item i {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.law-aria-section__nav-list-item i:not(:last-child) {
+  display: none;
+}
+.law-aria-section__nav-list-item a {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.law-aria-section__nav-list-item.active {
+  transform: unset;
+  color: #967745;
+}
+.law-aria-section__aside {
+  flex: 2;
+  color: #111;
+  max-width: 86rem;
+}
+.law-aria-section__aside-title {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block-end: 3.2rem;
+}
+.law-aria-section__aside-text {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  margin-block-end: 3rem;
+}
+.law-aria-section__accordion {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-flow: column;
+}
+.law-aria-section__accordion-item {
+  overflow: hidden;
+  width: 100%;
+}
+.law-aria-section__accordion-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  flex-flow: row nowrap;
+  cursor: pointer;
+  padding-inline: 1.4rem 3.4rem;
+  padding-block-end: 1.2rem;
+  border-bottom: 1px solid #967745;
+}
+@media (max-width: 768px) {
+  .law-aria-section__accordion-head {
+    padding-inline: 1.4rem;
+  }
+}
+@media (max-width: 430px) {
+  .law-aria-section__accordion-head {
+    padding-inline: 0 1rem;
+  }
+}
+.law-aria-section__accordion-head-title {
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #967745;
+}
+.law-aria-section__accordion-head i {
+  flex-shrink: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.law-aria-section__accordion-body {
+  overflow: hidden;
+  max-height: 0;
+  padding-inline: 1.4rem 3.2rem;
+}
+@media (max-width: 768px) {
+  .law-aria-section__accordion-body {
+    padding-inline: 1.4rem;
+  }
+}
+@media (max-width: 430px) {
+  .law-aria-section__accordion-body {
+    padding-inline: 0;
+  }
+}
+.law-aria-section__accordion-body-inner {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  padding-block-start: 1.2rem;
+}
+.law-aria-section__accordion-body-inner ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.9rem;
+  flex-flow: row nowrap;
+  font-weight: 500;
+}
+.law-aria-section__accordion-body-inner ul li:not(:last-child) {
+  margin-block-end: 0.8rem;
+}
+.law-aria-section__accordion-body-inner ul li .regular {
+  font-weight: 400;
+}
+.law-aria-section__accordion-body-inner ul li i {
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.law-aria-section__accordion-body-inner p .medium {
+  font-weight: 500;
+}
+.law-aria-section__accordion-body-inner p .semibold {
+  font-weight: 600;
+}
+.law-aria-section__accordion .open .law-aria-section__accordion-body {
+  max-height: max-content;
+}
+.law-aria-section__accordion .open .law-aria-section__accordion-head i {
+  transform: rotate(90deg);
 }
 
 .home-hero {

@@ -4,6 +4,7 @@ class ContactSectionComponent extends HTMLElement {
         let title = this.getAttribute('data-title') ?? 'Kontakt';
         let text = this.getAttribute('data-text') ?? 'Imate pitanja? Pošaljite nam poruku ili nas pozovite.';
         let background = this.getAttribute('data-background') ?? 'transparent';
+        let color = this.getAttribute('data-color') ?? 'inherit';
         this.innerHTML = `
                     <div class="contact-section__content container-m">
                         <h2 class="contact-section__title">${title}</h2>
@@ -66,6 +67,7 @@ class ContactSectionComponent extends HTMLElement {
 
         this.style.display = "block";
         this.style.background = background;
+        this.style.color = color;
         this.style.paddingBlock = paddingBlock;
         this.classList.add("contact-section");
         this.id = "kontakt-forma";
