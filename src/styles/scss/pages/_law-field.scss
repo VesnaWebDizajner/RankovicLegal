@@ -1,0 +1,76 @@
+@use "../abstracts/index" as *;
+
+.law-areas {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 11rem);
+    background: url(../../assets/img/building.jpg) no-repeat center/cover;
+    z-index: -1;
+
+    @include rwd(1200) {
+      height: calc(100% + 5rem);
+      top: -5rem;
+    }
+  }
+
+  &__content {
+    padding-block: 23.1rem 14.5rem;
+    text-align: center;
+
+    @include rwd(768) {
+      text-align: center;
+      padding-block: 0;
+      @include flex($flow: column, $align: center);
+      height: calc(100vh - 5rem);
+    }
+
+    &-text {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      margin-bottom: 3rem;
+      color: $primary-color;
+      text-transform: uppercase;
+
+      @include rwd(768) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+      }
+
+      @include rwd(320) {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4rem;
+      text-transform: uppercase;
+      margin-block-end: 1.6rem;
+
+      @include rwd(768) {
+        font-size: 4.8rem;
+        line-height: 6.7rem;
+      }
+
+      @include rwd(320) {
+        font-size: 3.8rem;
+        line-height: 5.7rem;
+      }
+    }
+
+     a {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
