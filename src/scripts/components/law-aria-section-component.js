@@ -3,11 +3,11 @@ class LawAriaSectionComponent extends HTMLElement {
         const elements = this.innerHTML;
         this.innerHTML = `
                 <div class="law-aria-section__content container-l">
-                    <law-aria-navigation-component
-                    ${elements}}
+                    ${elements}
                 </div>`;
                     
         this.style.display = "block";
+        this.id = "law-area";
         this.classList.add("law-aria-section");
         this.role = "region";
         this.ariaLabel = "Sekcija Oblasti Pravnog Rada"

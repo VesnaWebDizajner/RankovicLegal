@@ -1,12 +1,3 @@
-class ContentData {
-    constructor(data) {
-        this.title = data.title || 'Default Title';
-        this.texts = data.texts || ['Default text 1', 'Default text 2'];
-        this.accordions = data.accordions || {}
-    }
-}
-
-
 class LawAriaAsideComponent extends HTMLElement {
     connectedCallback() {
         const data = JSON.parse(document.getElementById('aside-data').textContent);
@@ -20,15 +11,30 @@ class LawAriaAsideComponent extends HTMLElement {
                             <div class="law-aria-section__accordion-item">
                                 <div class="law-aria-section__accordion-head">
                                     <h3 class="law-aria-section__accordion-head-title">
-                                        ${item.title}
+                                        ${item.heading}
                                     </h3>
                                     <i class="icon-arrow-right"></i>
                                 </div>
                                 <div class="law-aria-section__accordion-body">
                                     <div class="law-aria-section__accordion-body-inner">
-                                        ${item.list
-                                            ? `<ul>${item.list.map(li => `<li><i class="icon-check"></i>${li}</li>`).join('')}</ul>`
-                                            : item.text ? `<p>${item.text}</p>` : ''}
+                                        ${item.content.map(element => (
+                                            element.text
+                                                ? `<p class="text">${element.text}</p>`
+                                                : element.title
+                                                    ? `<h3 class="title">${element.title}</h3>`
+                                                    : element.textBox
+                                                        ? `<div class="text-box">
+                                                                <h3 class="text-box-title">${element.textBox.title}</h3>
+                                                                <p class="text-box-text">${element.textBox.text}</p>
+                                                            </div>`
+                                                        : element.checkList
+                                                            ? `<ul class="check-list">${element.checkList.map(li => `<li><i class="icon-check"></i>${li}</li>`).join('')}</ul>`
+                                                            : element.numList
+                                                                ? `<ul class="num-list">${element.checkList.map(li => `<li>${li}</li>`).join('')}</ul>`
+                                                                : element.buletList
+                                                                    ? `<ul class="bulet-list">${element.checkList.map(li => `<li>${li}</li>`).join('')}</ul>`
+                                                                    : ''
+                                        )).join('')}
                                     </div>
                                 </div>
                             </div>

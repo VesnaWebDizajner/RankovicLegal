@@ -20,7 +20,7 @@
     &__nav {
         @include positioning($position: sticky, $left: 0, $top: 12rem);
         flex: 1;
-        max-width: 30.9rem;
+        max-width: 30.6rem;
         background: $dark-color;
         border-radius: .8rem;
         box-shadow: 0 0 .85rem .3rem #00000040;
@@ -76,7 +76,10 @@
                     height: 1.6rem;
 
                     &:not(:last-child) {
-                        display: none;
+
+                        @include rwd(768) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -110,12 +113,16 @@
         &-text {
             font-size: 1.4rem;
             line-height: 2.4rem;
-            margin-block-end: 3rem;
+            margin-block-end: 1.4rem;
+
+            &:last-of-type {
+                margin-block-end: 3rem;
+            }
         }
     }
 
     &__accordion {
-        @include flex($flow: column, $align: flex-start, $gap: 3rem);
+        @include flex($flow: column, $align: flex-start, $gap: 1.4rem);
 
         &-item {
             overflow: hidden;
@@ -167,9 +174,8 @@
             &-inner {
                 font-size: 1.4rem;
                 line-height: 2.4rem;
-                padding-block-start: 1.2rem;
 
-                ul {
+                .check-list {
                     li {
                         @include flex($gap: .9rem, $justify: flex-start, $align: flex-start);
                         font-weight: 500;
@@ -177,11 +183,7 @@
                         &:not(:last-child) {
                             margin-block-end: .8rem;
                         }
-
-                        .regular {
-                            font-weight: 400;
-                        }
-
+                        
                         i {
                             flex-shrink: 0;
                             margin-top: .4rem;
@@ -191,14 +193,39 @@
                     }
                 }
 
-                p {
-                    .medium {
-                        font-weight: 500;
-                    }
+                .text,
+                .title,
+                .text-box,
+                .check-list,
+                .num-list,
+                .bulet-list {
+                    margin-block: 1.6rem;
+                }
 
-                    .semibold {
+                .title {
+                    font-weight: 600;
+                }
+
+                .text-box {
+                    &-title {
                         font-weight: 600;
                     }
+                }
+
+                .regular {
+                    font-weight: 400;
+                }
+
+                .medium {
+                    font-weight: 500;
+                }
+
+                .semibold {
+                    font-weight: 600;
+                }
+
+                .bold {
+                    font-weight: 700;
                 }
             }
         }
