@@ -30,10 +30,12 @@ class LawAriaAsideComponent extends HTMLElement {
                                                         : element.checkList
                                                             ? `<ul class="check-list">${element.checkList.map(li => `<li><i class="icon-check"></i>${li}</li>`).join('')}</ul>`
                                                             : element.numList
-                                                                ? `<ul class="num-list">${element.checkList.map(li => `<li>${li}</li>`).join('')}</ul>`
+                                                                ? `<ul class="num-list">${element.numList.map(li => `<li>${li}</li>`).join('')}</ul>`
                                                                 : element.buletList
-                                                                    ? `<ul class="bulet-list">${element.checkList.map(li => `<li>${li}</li>`).join('')}</ul>`
-                                                                    : ''
+                                                                    ? `<ul class="bulet-list">${element.buletList.map(li => `<li>${li}</li>`).join('')}</ul>`
+                                                                    : element.letterList
+                                                                        ? `<ul class="letter-list">${element.letterList.map(li => `<li>${li}</li>`).join('')}</ul>`
+                                                                        : ''
                                         )).join('')}
                                     </div>
                                 </div>

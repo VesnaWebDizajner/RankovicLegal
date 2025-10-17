@@ -175,15 +175,17 @@
                 font-size: 1.4rem;
                 line-height: 2.4rem;
 
+                * {
+                    &::first-letter {
+                        text-transform: initial;
+                    }
+                }
+
                 .check-list {
                     li {
                         @include flex($gap: .9rem, $justify: flex-start, $align: flex-start);
                         font-weight: 500;
 
-                        &:not(:last-child) {
-                            margin-block-end: .8rem;
-                        }
-                        
                         i {
                             flex-shrink: 0;
                             margin-top: .4rem;
@@ -193,12 +195,53 @@
                     }
                 }
 
+                .letter-list {
+                    counter-reset: alpha;
+
+                    li {
+                        counter-increment: alpha;
+                        padding-left: 2ch;
+                        position: relative;
+
+                        &::before {
+                            content: counter(alpha, lower-alpha) ")";
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .num-list {
+                    padding-inline-start: 1.4rem;
+
+                    li {
+                        list-style: decimal;
+                    }
+                }
+
+                .bulet-list {
+                    padding-inline-start: 1.4rem;
+
+                    li {
+                        list-style: disc;
+                    }
+                }
+
+                ul {
+                    li {
+                        &:not(:last-child) {
+                            margin-block-end: .8rem;
+                        }
+                    }
+                }
+
                 .text,
                 .title,
                 .text-box,
                 .check-list,
                 .num-list,
-                .bulet-list {
+                .bulet-list,
+                .letter-list {
                     margin-block: 1.6rem;
                 }
 
@@ -226,6 +269,10 @@
 
                 .bold {
                     font-weight: 700;
+                }
+
+                .italic {
+                    font-style: italic;
                 }
             }
         }
