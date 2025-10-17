@@ -3,6 +3,7 @@
 .law-aria-section {
     background: $bg-color-light;
     padding-block: 7.7rem 15.3rem;
+    scroll-margin-top: 11rem;
 
     &__content {
         @include flex($gap: 8rem, $align: flex-start);

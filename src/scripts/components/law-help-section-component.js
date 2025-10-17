@@ -1,6 +1,5 @@
 class LawHelpSectionComponent extends HTMLElement {
     connectedCallback() {
-        const elements = this.innerHTML;
         this.innerHTML = `
                 <div class="law-help__content container-l">
                     <div class="law-help__content-container">

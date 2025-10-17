@@ -1,6 +1,8 @@
 @use "../abstracts/index" as *;
 
 .practice-section {
+    scroll-margin-top: 11rem;
+
     &__content {
         @include flex($gap: 2.4rem, $align: stretch, $flow: row wrap);
 

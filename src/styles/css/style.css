@@ -738,6 +738,9 @@ img {
   margin-block-start: 0.3rem;
 }
 
+.practice-section {
+  scroll-margin-top: 11rem;
+}
 .practice-section__content {
   display: flex;
   justify-content: center;
@@ -1011,6 +1014,7 @@ img {
 .law-aria-section {
   background: #fff;
   padding-block: 7.7rem 15.3rem;
+  scroll-margin-top: 11rem;
 }
 .law-aria-section__content {
   display: flex;

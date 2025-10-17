@@ -16,6 +16,7 @@ class PracticeSectionComponent extends HTMLElement {
                     </div>`;
 
         this.style.display = "block";
+        this.id = "law-area";
         this.style.paddingBlock = paddingBlock;
         this.style.background = background;
         this.classList.add("practice-section");
