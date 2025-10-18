@@ -117,8 +117,7 @@ class FooterSectionComponent extends HTMLElement {
                         <hr />
                         <div class="footer__copyright container-m">
                             <p>
-                                <span>© 2024 Ranković Legal.</span>
-                                <span>Sva prava zadržana.</span>
+                                <span>© Copyright 2025 Ranković Legal. All Rights Reserved.</span>
                             </p>
                             <p>
                                 Designed by
