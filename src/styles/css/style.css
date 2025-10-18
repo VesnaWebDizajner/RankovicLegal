@@ -1879,42 +1879,49 @@ img {
 .law-help {
   background: linear-gradient(90deg, #111111, #292929);
   padding: 4rem 0;
+  width: 100%;
+  display: block;
+}
+@media (max-width: 800px) {
+  .law-help {
+    max-width: 119.6rem;
+  }
 }
 .law-help__content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
+  flex-flow: wrap;
 }
 @media (max-width: 768px) {
   .law-help__content {
     text-align: center;
-    padding-block: 0;
+    padding: 2rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 2rem;
     flex-flow: column;
-    height: calc(100vh - 5rem);
   }
 }
 .law-help__content-title {
   font-size: 4rem;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.1;
   margin-block-end: 1.6rem;
   max-width: 600px;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .law-help__content-title {
     font-size: 2.8rem;
-    line-height: 6.7rem;
+    line-height: 4.7rem;
   }
 }
 @media (max-width: 320px) {
   .law-help__content-title {
     font-size: 1.8rem;
-    line-height: 5.7rem;
+    line-height: 4.7rem;
   }
 }
 .law-help__content-text {
@@ -1934,6 +1941,16 @@ img {
     font-size: 1.2rem;
     line-height: 2rem;
   }
+}
+.law-help__content-img {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.law-help__content-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .law-help__content .bttn-primary-m {
   margin-inline-end: 1.6rem;
