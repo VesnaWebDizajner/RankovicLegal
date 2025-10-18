@@ -1882,11 +1882,6 @@ img {
   width: 100%;
   display: block;
 }
-@media (max-width: 800px) {
-  .law-help {
-    max-width: 119.6rem;
-  }
-}
 .law-help__content {
   display: flex;
   justify-content: space-between;

@@ -89,10 +89,6 @@
   width: 100%;
   display: block;
 
-  @include rwd(800){
-    max-width: 119.6rem;
-  }
-
   &__content {
     @include flex(space-between, center, 2rem, wrap);
   
