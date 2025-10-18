@@ -98,6 +98,7 @@
                 @include rwd(800) {
                     width: max-content;
                     margin-inline: auto;
+                    margin-bottom: 5rem;
                 }
 
                 @include rwd(430) {
@@ -138,6 +139,7 @@
                 height: 3rem;
                 text-align: center;
                 border-radius: 50%;
+                @include flex();
 
                 .icon-in {
                     background-color: $light-color;
@@ -145,8 +147,7 @@
                     height: 1.2rem;
 
                     @include rwd(800) {
-                        margin-block-start: 4rem;
-                        margin-inline-start: auto;
+                        margin: 0;
                     }
                 }
             }

@@ -598,6 +598,7 @@ img {
   .contact-section__box .text-box__contact {
     width: max-content;
     margin-inline: auto;
+    margin-bottom: 5rem;
   }
 }
 @media (max-width: 430px) {
@@ -637,6 +638,11 @@ img {
   height: 3rem;
   text-align: center;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: row nowrap;
 }
 .contact-section__box .text-box__icon-box .icon-in {
   background-color: #fff;
@@ -645,8 +651,7 @@ img {
 }
 @media (max-width: 800px) {
   .contact-section__box .text-box__icon-box .icon-in {
-    margin-block-start: 4rem;
-    margin-inline-start: auto;
+    margin: 0;
   }
 }
 .contact-section__box .form-box {
@@ -1796,7 +1801,7 @@ img {
   }
 }
 .law-areas__content {
-  padding-block: 23.1rem 14.5rem;
+  padding-block: 20.1rem 15.5rem;
   text-align: center;
 }
 @media (max-width: 768px) {
@@ -1814,19 +1819,19 @@ img {
 .law-areas__content-text {
   font-size: 2rem;
   line-height: 2.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #967745;
   text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .law-areas__content-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2.4rem;
   }
 }
 @media (max-width: 320px) {
   .law-areas__content-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 2rem;
   }
 }
@@ -1839,20 +1844,36 @@ img {
 }
 @media (max-width: 768px) {
   .law-areas__content-title {
-    font-size: 4.8rem;
+    font-size: 2.5rem;
     line-height: 6.7rem;
   }
 }
 @media (max-width: 320px) {
   .law-areas__content-title {
-    font-size: 3.8rem;
+    font-size: 2rem;
     line-height: 5.7rem;
   }
 }
-.law-areas__content a {
-  margin-top: 4rem;
+.law-areas__content-arrow {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #fff;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-flow: row;
+  margin-inline: auto;
+}
+@media (max-width: 768px) {
+  .law-areas__content-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-flow: column;
+  }
 }
 
 .law-help {
@@ -1886,13 +1907,13 @@ img {
 }
 @media (max-width: 768px) {
   .law-help__content-title {
-    font-size: 4.8rem;
+    font-size: 2.8rem;
     line-height: 6.7rem;
   }
 }
 @media (max-width: 320px) {
   .law-help__content-title {
-    font-size: 3.8rem;
+    font-size: 1.8rem;
     line-height: 5.7rem;
   }
 }
@@ -1922,7 +1943,7 @@ img {
   .law-help__content .bttn-primary-m {
     display: flex;
     margin-inline: auto;
-    margin-block-end: 2rem;
+    margin-block-end: 3rem;
   }
 }
 

@@ -21,7 +21,7 @@
   }
 
   &__content {
-    padding-block: 23.1rem 14.5rem;
+    padding-block: 20.1rem 15.5rem;
     text-align: center;
 
     @include rwd(768) {
@@ -34,17 +34,17 @@
     &-text {
       font-size: 2rem;
       line-height: 2.6rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
       color: $primary-color;
       text-transform: uppercase;
 
       @include rwd(768) {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 2.4rem;
       }
 
       @include rwd(320) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 2rem;
       }
     }
@@ -57,20 +57,28 @@
       margin-block-end: 1.6rem;
 
       @include rwd(768) {
-        font-size: 4.8rem;
+        font-size: 2.5rem;
         line-height: 6.7rem;
       }
 
       @include rwd(320) {
-        font-size: 3.8rem;
+        font-size: 2rem;
         line-height: 5.7rem;
       }
     }
+    
+    &-arrow {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $light-color;
+    border-radius: 50%;
+    @include flex(center, center, 0, row);
+    margin-inline: auto;
+    
 
-     a {
-      margin-top: 4rem;
-      display: flex;
-      justify-content: center;
+    @include rwd(768) {
+      @include flex($flow: column, $align: center);
+    }
     }
   }
 }
@@ -100,12 +108,12 @@
       max-width: 600px;
       
       @include rwd(768) {
-        font-size: 4.8rem;
+        font-size: 2.8rem;
         line-height: 6.7rem;
       }
 
       @include rwd(320) {
-        font-size: 3.8rem;
+        font-size: 1.8rem;
         line-height: 5.7rem;
       }
     }
@@ -134,7 +142,7 @@
       @include rwd(380) {
         display: flex;
         margin-inline: auto;
-        margin-block-end: 2rem;
+        margin-block-end: 3rem;
       }
     }
   }

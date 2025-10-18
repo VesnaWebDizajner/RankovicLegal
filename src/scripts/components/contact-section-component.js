@@ -57,7 +57,7 @@ class ContactSectionComponent extends HTMLElement {
                                     <input type="tel" name="phone" id="phone">
                                 </label>
                                 <label for="message" class="message">
-                                    poruka <span>*</span>
+                                    Poruka <span>*</span>
                                     <textarea name="message" id="message" rows="1"></textarea>
                                 </label>
                                 <button class="bttn-secondary" type="submit">Pošaljite poruku</button>
