@@ -73,14 +73,9 @@
       color: $primary-color;
       text-decoration: none;
       font-weight: 500;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      text-decoration: underline;
     }
   }
-
-
 
 .blog-related {
 
@@ -113,9 +108,8 @@
 .blog-card {
   background-color: $light-color;
   border-radius: 8px;
-  flex: 1;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   transition: all 0.3s ease;
   max-width: 42rem;
   padding: 0;
@@ -138,7 +132,6 @@
   }
 
   &__meta,
-  &__title,
   &__desc,
   &__tags {
     padding: 0 2.4rem;
@@ -154,12 +147,31 @@
     font-size: 1.4rem;
   }
 
+  &__header {
+    @include flex(space-between);
+    width: 100%;                     
+    padding-inline: 2.4rem; 
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem; 
+
+    .arrow {
+      color: $dark-color;
+      transform: rotate(-45deg);
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform 0.3s ease;
+      font-size: 1.8rem;
+    }
+  }
+
   &__title {
     font-size: 1.8rem;
     font-weight: 600;
     color: $dark-color;
-    margin-top: 0.8rem;
-    margin-bottom: 0.4rem;
+    margin: 0;
+    flex: 1;                         
+    text-align: left; 
+  
 
     @include rwd(922) {
       font-size: 2.8rem;
