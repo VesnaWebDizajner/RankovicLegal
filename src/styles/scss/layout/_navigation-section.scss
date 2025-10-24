@@ -148,7 +148,7 @@
                 &::before {
                     content: "";
                     position: absolute;
-                    top: calc(-50% - 3rem);
+                    top: calc(-50% - 3.2rem);
                     left: calc(50% - 2rem);
                     transform: translate(calc(-50% + 2rem), 50%);
                     width: calc(100% + 2rem);
@@ -225,6 +225,7 @@
                 @include rwd(1200) {
                     &::before {
                         background-color: $dark-color;
+                        border: .1rem solid $primary-color;
                     }
                 }
             }

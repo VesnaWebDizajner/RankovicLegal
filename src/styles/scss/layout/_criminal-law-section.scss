@@ -5,6 +5,10 @@
     padding-block: 7.7rem 15.3rem;
     scroll-margin-top: 11rem;
 
+    @include rwd(1200) {
+        scroll-margin-top: 0;
+    }
+
     &__content {
         @include flex($gap: 8rem, $align: flex-start);
         position: relative;

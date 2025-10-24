@@ -3,6 +3,10 @@
 .practice-section {
     scroll-margin-top: 11rem;
 
+    @include rwd(1200) {
+        scroll-margin-top: 0;
+    }
+
     &__content {
         @include flex($gap: 2.4rem, $align: stretch, $flow: row wrap);
 

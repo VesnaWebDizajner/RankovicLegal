@@ -1,8 +1,8 @@
 @use "../abstracts/index" as *;
 
 .contact-section {
-    scroll-margin-top: $scrolMarginTop;
-    
+    scroll-margin-top: 9.8rem;
+
     &__title {
         font-size: 4rem;
         font-weight: 700;
@@ -110,6 +110,10 @@
                     font-size: 1.2rem;
                 }
 
+                @include rwd(320) {
+                    margin-inline: unset;
+                }
+
                 &-opt {
                     &:not(:last-of-type) {
                         margin-bottom: 2.4rem;
@@ -127,6 +131,10 @@
                         @include rwd(430) {
                             width: 1.8rem;
                             height: 1.7rem;
+                        }
+
+                        @include rwd(320) {
+                            display: none;
                         }
                     }
                 }
@@ -178,6 +186,7 @@
 
             @include rwd(430) {
                 padding-inline: 0;
+                flex-direction: column;
             }
 
             &__heading {
@@ -213,6 +222,10 @@
                     flex: 0 1 calc(50% - 1rem);
                 }
 
+                @include rwd(430) {
+                    width: 100%;
+                }
+
                 &::first-letter {
                     text-transform: capitalize;
                     color: red;
@@ -226,8 +239,8 @@
                 }
 
                 textarea {
-                   min-width: 100%;
-                   padding-block-start: .575rem;
+                    min-width: 100%;
+                    padding-block-start: .575rem;
                 }
 
                 &.message {
@@ -238,6 +251,10 @@
             .bttn-secondary {
                 margin-inline-start: auto;
                 margin-block-start: .3rem;
+
+                @include rwd(430) {
+                    margin-inline: auto;
+                }
             }
         }
     }

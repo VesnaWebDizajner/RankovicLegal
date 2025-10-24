@@ -6,31 +6,32 @@
   scroll-margin-top: 11rem;
 
   @include rwd(1200) {
-      padding-block: 6rem 10rem;
-    }
+    padding-block: 6rem 10rem;
+    scroll-margin-top: 0;
   }
+}
 
 
 .blog-post__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
 
-    @include rwd(1200) {
-        gap: 6rem;
-        padding-inline: 4rem; 
-      }
+  @include rwd(1200) {
+    gap: 6rem;
+    padding-inline: 4rem;
+  }
 
-    @include rwd(922) {
-      padding-inline: 3rem;
-    }
-    }
+  @include rwd(922) {
+    padding-inline: 3rem;
+  }
+}
 
 .blog-post__article {
-    background-color: $light-color;
-    color: $dark-color;
-  }
+  background-color: $light-color;
+  color: $dark-color;
+}
 
 .blog-post-meta {
   @include flex(space-between);
@@ -39,43 +40,44 @@
 
 .blog-post__author,
 .blog-post__date {
-    font-size: 1.4rem;
-    color: #A6A6A6;
-    
-  }
+  font-size: 1.4rem;
+  color: #A6A6A6;
+
+}
 
 .blog-post__title {
-    font-size: 3.6rem;
-    font-weight: 700;
-    color: $dark-color;
-    margin-bottom: 3.2rem;
-    line-height: 3.2rem;
-  }
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: $dark-color;
+  margin-bottom: 3.2rem;
+  line-height: 3.2rem;
+}
 
 .blog-post__image {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 32px;
-  }
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
 
 .blog-post__content {
   flex: 2;
-    p {
-      color: $dark-color;
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      text-align: justify;
 
-    }
+  p {
+    color: $dark-color;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
 
-    .blog-post__link {
-      color: $primary-color;
-      text-decoration: none;
-      font-weight: 500;
-      text-decoration: underline;
-    }
   }
+
+  .blog-post__link {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
 
 .blog-related {
 
@@ -99,7 +101,7 @@
 
     @include rwd(922) {
       flex-direction: column;
-      align-items: center; 
+      align-items: center;
       gap: 4rem;
     }
   }
@@ -149,10 +151,10 @@
 
   &__header {
     @include flex(space-between);
-    width: 100%;                     
-    padding-inline: 2.4rem; 
+    width: 100%;
+    padding-inline: 2.4rem;
     margin-top: 0.8rem;
-    margin-bottom: 0.4rem; 
+    margin-bottom: 0.4rem;
 
     .arrow {
       color: $dark-color;
@@ -169,9 +171,9 @@
     font-weight: 600;
     color: $dark-color;
     margin: 0;
-    flex: 1;                         
-    text-align: left; 
-  
+    flex: 1;
+    text-align: left;
+
 
     @include rwd(922) {
       font-size: 2.8rem;
@@ -237,5 +239,3 @@
     justify-content: flex-end;
   }
 }
-
-

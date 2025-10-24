@@ -404,7 +404,7 @@ img {
   .navigation-section .nav__hamburger::before {
     content: "";
     position: absolute;
-    top: calc(-50% - 3rem);
+    top: calc(-50% - 3.2rem);
     left: calc(50% - 2rem);
     transform: translate(calc(-50% + 2rem), 50%);
     width: calc(100% + 2rem);
@@ -493,6 +493,7 @@ img {
 @media (max-width: 1200px) {
   .navigation-section.scrolled .nav__hamburger::before {
     background-color: #111;
+    border: 0.1rem solid #967745;
   }
 }
 .navigation-section #nav-toggle:checked ~ .mobile-menu {
@@ -612,6 +613,11 @@ img {
     font-size: 1.2rem;
   }
 }
+@media (max-width: 320px) {
+  .contact-section__box .text-box__contact {
+    margin-inline: unset;
+  }
+}
 .contact-section__box .text-box__contact-opt:not(:last-of-type) {
   margin-bottom: 2.4rem;
 }
@@ -629,6 +635,11 @@ img {
   .contact-section__box .text-box__contact-opt i {
     width: 1.8rem;
     height: 1.7rem;
+  }
+}
+@media (max-width: 320px) {
+  .contact-section__box .text-box__contact-opt i {
+    display: none;
   }
 }
 .contact-section__box .text-box__icon-box {
@@ -687,6 +698,7 @@ img {
 @media (max-width: 430px) {
   .contact-section__box .form-box {
     padding-inline: 0;
+    flex-direction: column;
   }
 }
 .contact-section__box .form-box__heading {
@@ -721,6 +733,11 @@ img {
     flex: 0 1 calc(50% - 1rem);
   }
 }
+@media (max-width: 430px) {
+  .contact-section__box .form-box label {
+    width: 100%;
+  }
+}
 .contact-section__box .form-box label::first-letter {
   text-transform: capitalize;
   color: red;
@@ -742,9 +759,19 @@ img {
   margin-inline-start: auto;
   margin-block-start: 0.3rem;
 }
+@media (max-width: 430px) {
+  .contact-section__box .form-box .bttn-secondary {
+    margin-inline: auto;
+  }
+}
 
 .practice-section {
   scroll-margin-top: 11rem;
+}
+@media (max-width: 1200px) {
+  .practice-section {
+    scroll-margin-top: 0;
+  }
 }
 .practice-section__content {
   display: flex;
@@ -1020,6 +1047,11 @@ img {
   background: #fff;
   padding-block: 7.7rem 15.3rem;
   scroll-margin-top: 11rem;
+}
+@media (max-width: 1200px) {
+  .law-aria-section {
+    scroll-margin-top: 0;
+  }
 }
 .law-aria-section__content {
   display: flex;
@@ -1967,6 +1999,7 @@ img {
 @media (max-width: 1200px) {
   .blog-post-section {
     padding-block: 6rem 10rem;
+    scroll-margin-top: 0;
   }
 }
 
